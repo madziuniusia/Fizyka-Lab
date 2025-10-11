@@ -1,0 +1,341 @@
+\documentclass{fizykalab}
+
+% Ustawienia do tabelki
+
+\wydzial{WI}
+\autorjeden{Dawid Komęza}
+\autordwa{Magdalena Śmietana}
+\rok{II}
+\grupa{14}
+\zespol{2}
+\temat{Moduł Younga}
+\nrcwiczenia{11}
+\datawykonania{11.10.2025}
+\dataoddaniajeden{}
+\zwrotdopoprawy{}
+\dataoddaniadwa{}
+\datazaliczenia{}
+
+\begin{document}
+
+\maketitle
+
+\section{Cel ćwiczenia}
+
+Celem ćwiczenia jest wyznaczenie modułu Younga \(E\) metodą statyczną
+na podstawie pomiaru wydłużenia drutu z badanego metalu obciążonego
+znaną siłą. Dodatkowo celem jest weryfikacja liniowej zależności prawa
+Hooke'a w zakresie odkształceń sprężystych oraz oszacowanie niepewności
+wyniku i porównanie go z wartościami tablicowymi. W szczególności:
+
+\begin{itemize}
+  \item wykonanie pomiarów dla dwóch drutów wykonanych z różnych metali,
+    z zachowaniem dopuszczalnych obciążeń (do 10 kg dla stali, do 6 kg dla mosiądzu);
+  \item zapis wskazań czujnika dla rosnących \(\uparrow\) i malejących
+    \(\downarrow\) wartości obciążenia oraz wyznaczenie wydłużenia
+    drutu \(\Delta l\) z uwzględnieniem przełożenia dźwigni czujnika,
+    tj. \(\Delta l = (\text{cz} \uparrow + \text{cz} \downarrow)/4\);
+  \item porównanie otrzymanych wartości \(E\) z danymi tablicowymi dla
+    badanych materiałów, ocena zgodności w granicach niepewności
+    rozszerzonej i określenie wniosków dotyczących pomiarów i wyników.
+\end{itemize}
+
+\section{Wstęp teoretyczny}
+
+Podstawą opisu sprężystego odkształcania ciał stałych jest prawo Hooke'a,
+które w zakresie małych odkształceń (zakres liniowo-sprężysty) opisuje
+proporcjonalną zależność między naprężeniem a odkształceniem względnym.
+Dla jednoosiowego rozciągania (pręt lub drut obciążony siłą wzdłuż osi)
+prawo Hooke'a ma postać liniową:
+$$
+\sigma = E\,\varepsilon,
+$$
+gdzie: \( \sigma \) to naprężenie normalne, \( \varepsilon \) to
+odkształcenie względne, a \( E \) to moduł Younga (moduł sprężystości
+podłużnej). Naprężenie definiuje się jako siłę odniesioną do pola
+przekroju poprzecznego próbki,
+\( \sigma = F/S \), natomiast odkształcenie względne jako stosunek
+wydłużenia do długości początkowej,
+\( \varepsilon = \Delta l / l \).
+
+Stąd moduł Younga można wyrazić wzorem:
+$$
+E = \frac{\sigma}{\varepsilon} = \frac{F/S}{\Delta l / l}
+= \frac{F\,l}{S\,\Delta l}.
+$$
+
+W ćwiczeniu wyznacza się \( E \) metodą statyczną, mierząc wydłużenie
+prostego drutu o długości \( l \) i średnicy
+\( d \), rozciąganego siłą \( F \). Dla kołowego przekroju
+\( S = \pi d^{2}/4 \) otrzymać można wzór roboczy:
+$$
+E = \frac{4\,F\,l}{\pi\,d^{2}\,\Delta l}.
+$$
+Siłę rozciągającą oblicza się z masy odważników:
+\( F = m\,g \), gdzie \( g \) jest przyspieszeniem ziemskim.
+
+\bigskip
+Zgodnie z prawem Hooke'a, w zakresie sprężystym zależność
+\( \Delta l(F) \) powinna być liniowa i można ją opisać równaniem
+prostej \( \Delta l = a\,F + b \), gdzie \( a = l/(E\,S) \).
+Uwzględniając poprzednie wzory, moduł Younga można wyrazić jako:
+$$
+E = \frac{l}{a\,S} = \frac{4\,l}{\pi\,d^{2}\,a}.
+$$
+
+Punkty zauważalnie odstające od przebiegu liniowego świadczą o
+niedoskonałościach układu (tarcie, luz, histereza czujnika) lub o
+opuszczeniu ścisłego zakresu sprężystości (deformacja plastyczna). Aby ograniczyć wpływ tych
+czynników, rejestruje się wskazania przy obciążaniu i odciążaniu oraz
+uśrednia się je.
+
+W zastosowanym układzie czujnik mikrometryczny współpracuje z dźwignią,
+która przenosi ruch końca drutu na czujnik. Ze względu na przełożenie
+mechaniczne wskazanie czujnika jest dwukrotnie większe od rzeczywistego
+wydłużenia drutu. Dlatego przy wyznaczaniu wydłużenia wykorzystuje się
+średnią ze wskazań dla narastającego i malejącego obciążenia oraz dzieli
+się wynik dodatkowo przez 2, co prowadzi do praktycznego wzoru
+uśredniającego:
+$$
+\Delta l = \frac{\text{cz} \uparrow + \text{cz} \downarrow}{4},
+$$
+gdzie \( \text{cz} \uparrow \) i \( \text{cz} \downarrow \) oznaczają
+odczyty czujnika odpowiednio przy dokładaniu i zdejmowaniu odważników.
+
+Moduł Younga ma wymiar i jednostkę ciśnienia: \( [E] = \mathrm{Pa} \).
+Dla metali typowe wartości mieszczą się w przedziale od kilkudziesięciu
+do kilkuset gigapaskali (np. stal około \( 200\ \mathrm{GPa} \),
+  miedź około \( 110\ \mathrm{GPa} \), mosiądz około \( 90\text{--}110\
+\mathrm{GPa} \)). Przekroczenie granicy sprężystości prowadzi do
+odkształceń trwałych (nieliniowość, uplastycznienie), a proste zależności
+powyżej przestają obowiązywać. Dlatego w trakcie ćwiczenia należy dobierać
+obciążenia w takim zakresie, aby materiał pracował sprężyście, a wykres
+\( \Delta l(F) \) pozostawał liniowy.
+
+\section{Wzory}
+
+\subsection{Definicje i zależności podstawowe}
+
+Podstawą wyznaczenia modułu Younga jest prawo Hooke'a, określające
+zależność między naprężeniem a odkształceniem względnym:
+$$
+\sigma = E\,\varepsilon,
+$$
+gdzie \( \sigma \) oznacza naprężenie (czyli siłę odniesioną do jednostki
+powierzchni przekroju), \( \varepsilon \) to odkształcenie względne, a
+\( E \) to poszukiwany moduł Younga.
+
+Aby wyrazić naprężenie i odkształcenie w postaci praktycznej,
+korzystamy z definicji:
+$$
+\sigma = \frac{F}{S}, \qquad \varepsilon = \frac{\Delta l}{l},
+$$
+gdzie \( F \) to przyłożona siła rozciągająca, \( S \) — pole przekroju
+poprzecznego drutu, \( \Delta l \) — jego wydłużenie, a \( l \) — długość
+początkowa odcinka pomiarowego.
+
+Podstawiając te zależności do prawa Hooke'a, otrzymujemy wyrażenie na
+moduł Younga:
+$$
+E = \frac{\sigma}{\varepsilon}
+= \frac{F l}{S\,\Delta l}.
+$$
+Z równania tego wynika, że im większe jest wydłużenie drutu dla tej samej
+siły, tym mniejszy moduł sprężystości (materiał bardziej podatny na
+odkształcenie).
+\pagebreak
+
+\subsection{Zależność pomiarowa i wzór roboczy}
+
+Na podstawie prawa Hooke'a można przewidzieć, że w zakresie sprężystym
+zależność wydłużenia drutu od przyłożonej siły powinna być liniowa.
+Można ją opisać równaniem prostej:
+$$
+\Delta l(F) = a\,F + b.
+$$
+Współczynnik \( a \) jest nachyleniem prostej, wyznaczonym z wykresu
+\(\Delta l(F)\), natomiast \( b \) reprezentuje ewentualne przesunięcie
+(luz początkowy lub błąd zerowania).
+Przekształcając wzór na moduł Younga, otrzymujemy zależność:
+$$
+\Delta l = \frac{F\,l}{E\,S}
+$$
+co pozwala zidentyfikować współczynnik nachylenia:
+$$
+a = \frac{l}{E\,S},
+$$
+co po przekształceniu daje wzór roboczy na moduł Younga:
+$$
+E = \frac{l}{a\,S}.
+$$
+
+\subsection{Wzory pomocnicze}
+
+Ze względu na zastosowanie w układzie dźwigni, czujnik mikrometryczny
+pokazuje odkształcenie dwukrotnie większe niż rzeczywiste. Dodatkowo dla
+zmniejszenia wpływu histerezy pomiary wykonuje się przy obciążaniu
+(\(\uparrow\)) i odciążaniu (\(\downarrow\)), a następnie uśrednia:
+$$
+\Delta l = \frac{\text{cz} \uparrow + \text{cz} \downarrow}{4}.
+$$
+Taki sposób przeliczenia eliminuje systematyczne błędy
+mechaniczne przyrządu.
+
+\bigbreak
+Podczas pomiaru średnicy drutu stosuje się trzy niezależne pomiary w
+różnych miejscach, by uwzględnić ewentualne nierówności powierzchni.
+Średnią średnicę obliczamy ze wzoru:
+$$
+\overline{d} = \frac{d_{1}+d_{2}+d_{3}}{3}.
+$$
+
+Drut badany w ćwiczeniu ma przekrój kołowy, dlatego pole przekroju można
+zapisać jako:
+$$
+S = \frac{\pi d^{2}}{4},
+$$
+gdzie \( d \) to średnica drutu.
+
+Ponieważ napięcie w drucie powstaje w wyniku przyłożonej masy \( m \)
+odważników, siła rozciągająca wynosi:
+$$
+F = m\,g,
+$$
+gdzie \( g \) to przyspieszenie ziemskie (\( g \approx 9{,}811\,\mathrm{m/s^2} \)).
+W ten sposób uzyskujemy zależność pomiędzy masą użytych odważników a
+siłą działającą na drut.
+
+\subsection{Niepewności i niepewność rozszerzona}
+
+Niepewności pomiarowe przenosi się na wynik modułu Younga zgodnie
+z prawem przenoszenia niepewności względnych. Dla obliczeń opartych
+o nachylenie prostej \(a\) otrzymujemy:
+$$
+\frac{u_{c}(E)}{E} =
+\sqrt{
+  \left(\frac{u(l)}{l}\right)^{2} +
+  \left(2\,\frac{u(d)}{d}\right)^{2} +
+  \left(\frac{u(a)}{a}\right)^{2}
+}.
+$$
+Niepewność rozszerzoną oblicza się jako:
+$$
+U(E) = k\,u_{c}(E),
+$$
+gdzie \(k\) to współczynnik rozszerzenia, przyjmowany najczęściej
+\(k \approx 2\).
+
+Taka procedura pozwala określić, czy uzyskany wynik modułu Younga jest
+zgodny (w granicach niepewności rozszerzonej) z wartością tablicową dla
+danego materiału.
+
+\subsection{Konwersje jednostek i stałe}
+
+Ponieważ pomiary wykonywane są w milimetrach, konieczne jest
+przeliczenie jednostek na metry w układzie SI:
+$$
+\Delta l[\mathrm{m}] = \Delta l[\mathrm{mm}] \cdot 10^{-3}, \qquad
+d[\mathrm{m}] = d[\mathrm{mm}] \cdot 10^{-3}.
+$$
+Przyspieszenie ziemskie przyjmujemy jako:
+$$
+g \approx 9{,}811\,\mathrm{m/s^2}.
+$$
+Po uwzględnieniu tych konwersji wszystkie wzory przyjmują poprawną
+postać w układzie SI, a otrzymane wartości modułu Younga będą wyrażone
+w paskalach \([E] = \mathrm{Pa}\).
+
+\subsection{Wartości tablicowe modułu Younga i innych stałych sprężystych}
+
+Dla porównania wyników pomiarów z wartościami literaturowymi w tabeli
+poniżej zestawiono orientacyjne wartości modułu Younga \(E\), modułu
+Kirchoffa \(G\) (modułu sztywności postaciowej) oraz granicy plastyczności
+lub naprężenia dopuszczalnego \(\sigma_s\) dla wybranych materiałów.
+Wszystkie wartości podano w gigapaskalach \([\mathrm{GPa}]\).
+
+\bigskip
+\begin{center}
+  \begin{tabular}{|l|c|c|c|}
+    \hline
+    \textbf{Materiał} & \textbf{\(E\) [GPa]} & \textbf{\(G\) [GPa]} & \textbf{\(\sigma_s\) [GPa]} \\
+    \hline
+    Guma & 0{,}001 & 0{,}00002 & 0{,}001 \\
+    \hline
+    Ołów & 17 & 5{,}9 -- 6{,}4 & -- \\
+    \hline
+    Aluminium & 70 & 26 & 0{,}24 (dural) \\
+    \hline
+    Miedź & 110 -- 130 & 38 & 0{,}07 \\
+    \hline
+    Mosiądz & 100 & 42 & 0{,}3 \\
+    \hline
+    Stal węglowa pospolita & 210 -- 220 & 78 -- 82 & 0{,}4 \\
+    \hline
+    Stal węglowa sprężynowa & jw. & jw. & 1{,}65 \\
+    \hline
+    Diament & 1200 & 480 & -- \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\bigskip
+Moduł Younga ma bardzo szeroki zakres wartości — od około
+\(10^{-3}\ \mathrm{GPa}\) dla gumy (materiału bardzo podatnego) aż do
+ponad \(10^{3}\ \mathrm{GPa}\) dla diamentu, będącego jednym z
+najsztywniejszych znanych materiałów. Bardzie typowe materiały konstrukcyjne,
+takie jak stal, aluminium czy mosiądz, mają moduły Younga w
+zakresie od około \(70\ \mathrm{GPa}\) (aluminium) do ponad
+\(200\ \mathrm{GPa}\) (stal). Pomiar laboratoryjny powinien więc dać wynik
+zbliżony do tych wartości.
+
+\pagebreak
+\section{Aparatura pomiarowa}
+
+Zastosowana metoda pomiaru modułu Younga opiera się na bezpośrednim
+wyznaczeniu wielkości występujących we wzorze definicyjnym:
+\( E = \dfrac{F\,l}{S\,\Delta l} \).
+Do realizacji pomiarów zbudowano stanowisko przedstawione schematycznie
+na rysunku~\ref{rys:uklad}. Układ ten umożliwia precyzyjny pomiar
+wydłużenia drutu w funkcji przyłożonej siły rozciągającej.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.6\textwidth]{rys1.png}
+  \caption{Urządzenie do pomiaru modułu Younga metodą statyczną.}
+  \label{rys:uklad}
+\end{figure}
+
+\begin{itemize}
+  \item \textbf{A – Górny uchwyt:} służy do sztywnego zamocowania
+    badanego drutu w statywie. Jest stabilnym punktem odniesienia,
+    względem którego mierzone jest wydłużenie drutu.
+  \item \textbf{B – Dolny uchwyt:} połączony jest z szalką, na której
+    umieszcza się odważniki. Przekazuje on siłę ciężkości obciążników
+    na drut, powodując jego rozciąganie.
+  \item \textbf{C – Dźwignia pomiarowa:} przekazuje ruch (wydłużenie)
+    dolnego końca drutu do czujnika mikrometrycznego. Jest
+    podparta w połowie długości, natomiast punkt połączenia z drutem
+    oraz punkt styku z czujnikiem znajdują się symetrycznie po obu
+    stronach osi obrotu. Z tego względu przełożenie mechaniczne
+    dźwigni wynosi 2:1, co oznacza, że czujnik wskazuje wartość
+    dwukrotnie większą niż rzeczywiste wydłużenie drutu.
+  \item \textbf{D - Czujnik mikrometryczny:} służy do pomiaru
+    przemieszczenia końca dźwigni z dokładnością 0{,}01 mm.
+    Wskazania czujnika uśrednia się dla cyklu obciążania i
+    odciążania, aby zredukować wpływ tarcia i ewentualnej histerezy.
+\end{itemize}
+
+Średnicę badanego drutu \(d\) mierzy się niezależnie \emph{mikrometrem
+śrubowym}, wykonując pomiary w trzech różnych miejscach rozłożonych na
+jego długości. Na podstawie tych pomiarów oblicza się średnią wartość
+średnicy \(\overline{d}\).
+
+\pagebreak
+
+\section{Pomiary drutu stalowego}
+
+\section{Pomiary drutu mosiężnego}
+
+\section{Wnioski}
+
+\end{document}

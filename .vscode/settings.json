@@ -1,0 +1,12 @@
+{
+  "latex-workshop.latex.outDir": "build", // Output directory
+  "latex-workshop.latex.autoBuild.run": "onFileChange", // Auto build on save
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.exclude": {
+    "**/build": true
+  }
+}

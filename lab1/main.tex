@@ -332,151 +332,285 @@ jego długości. Na podstawie tych pomiarów oblicza się średnią wartość
 
 \pagebreak
 
-\section{Pomiary drutu stalowego}
-\begin{figure}[h!]
+\section{Wyniki pomiarów dla drutu stalowego}
+
+W tej części ćwiczenia badano zależność wydłużenia \(\Delta l\) od siły
+rozciągającej \(F\) dla drutu stalowego. Długość odcinka pomiarowego
+wynosiła \(l = 1{,}075\ \mathrm{m}\) przy niepewności
+\(u(l)=2\ \mathrm{mm}\). Średnicę zmierzono trzykrotnie:
+\(d_1=0{,}75\ \mathrm{mm},\ d_2=0{,}77\ \mathrm{mm},\ d_3=0{,}76\ \mathrm{mm}\);
+przyjęto \(\overline{d}=0{,}76\ \mathrm{mm}=0{,}00076\ \mathrm{m}\) oraz
+\(u(d)=0{,}01\ \mathrm{mm}\).
+Wydłużenie wyznaczano ze wskazań czujnika metodą
+\(\Delta l = (\mathrm{cz}\uparrow + \mathrm{cz}\downarrow)/4\).
+
+\begin{table}[H]
+  \centering
+  \caption{Pomiary wydłużenia drutu stalowego dla kolejnych obciążeń.}
+  \begin{tabular}{ccccccc}
+    \toprule
+    Lp. & \(m\)\,[kg] & \(F\)\,[N] &
+    cz \(\uparrow\)\,[mm] & cz \(\downarrow\)\,[mm] &
+    \(\Delta l\)\,[mm] & \(\Delta l\)\,[m] \\
+    \midrule
+    1 & 1 & 9{,}811 & 0{,}96 & 1{,}11 & 0{,}5175 & 0{,}0005175 \\
+    2 & 2 & 19{,}622 & 1{,}62 & 1{,}72 & 0{,}8350 & 0{,}0008350 \\
+    3 & 3 & 29{,}433 & 1{,}99 & 2{,}08 & 1{,}0175 & 0{,}0010175 \\
+    4 & 4 & 39{,}244 & 2{,}43 & 2{,}38 & 1{,}2025 & 0{,}0012025 \\
+    5 & 5 & 49{,}055 & 2{,}61 & 2{,}76 & 1{,}3425 & 0{,}0013425 \\
+    6 & 6 & 58{,}866 & 3{,}04 & 3{,}04 & 1{,}5200 & 0{,}0015200 \\
+    7 & 7 & 68{,}677 & 3{,}24 & 3{,}40 & 1{,}6600 & 0{,}0016600 \\
+    8 & 8 & 78{,}488 & 3{,}57 & 3{,}64 & 1{,}8025 & 0{,}0018025 \\
+    9 & 9 & 88{,}299 & 3{,}78 & 3{,}92 & 1{,}9250 & 0{,}0019250 \\
+    \bottomrule
+  \end{tabular}
+  \label{tab:stal_pomiary}
+\end{table}
+
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.9\textwidth]{stal.png}
-  \caption{Wykres zależności wydłużenia mosiężnego pręta od siły doń przyłożonej.}
+  \caption{Wykres zależności wydłużenia drutu stalowego od przyłożonej siły.
+  Do punktów dopasowano prostą metodą najmniejszych kwadratów.}
   \label{rys:uklad_stal}
-  \end{figure}
+\end{figure}
 
-Korzystając z funkcji \texttt{REGLINP()} w programie Microsoft Excel,
-można wyznaczyć współczynnik kierunkowy prostej wraz z jego niepewnością.
-Otrzymano następujące wyniki:
-\[
-A = 0{,}00001721\ \frac{\mathrm{m}}{\mathrm{N}},
-\qquad
-u(A) = 0{,}00000081\ \frac{\mathrm{m}}{\mathrm{N}}.
-\]
-Obliczenie wartości $E$
-\[
-E = \frac{4 \cdot 1.075}{\pi \cdot (0.00076)^2 \cdot 1.7217\times10^{-5}}
-= 1.37636\times10^{11}~\mathrm{Pa} = 137.6~\mathrm{GPa}
-\]
+Dopasowanie liniowe zależności \(\Delta l(F) = a\,F + b\) wykonano w
+programie Microsoft Excel (\texttt{REGLINP/LINEST}).
+Otrzymano nachylenie:
+$$
+a = (1{,}7217 \pm 0{,}0082)\times 10^{-5}\ \mathrm{\tfrac{m}{N}},
+$$
+gdzie podana niepewność to \(u(a)\).
 
-Niepewność złożona $u(E)$
-\[
-\frac{u(l)}{l}=\frac{0.002}{1.075}=0.00186,\qquad
-\frac{u(d)}{d}=\frac{0.00001}{0.00076}=0.01316,
-\]
-\[
-\frac{u(a)}{a}=\frac{8.194\times10^{-7}}{1.7217\times10^{-5}}=0.04760.
-\]
+\subsection{Wyznaczenie modułu Younga}
 
-\[
-\left(\frac{u(E)}{E}\right)^2 = (0.00186)^2 + (2\cdot0.01316)^2 + (0.04760)^2
-= 2.73\times10^{-6} + 6.93\times10^{-4} + 2.266\times10^{-3}
-= 0.002963
-\]
+Korzystając z zależności \(E = \dfrac{4\,l}{\pi\,d^{2}\,a}\) oraz
+\(l = 1{,}075\ \mathrm{m},\ d=0{,}00076\ \mathrm{m},\
+a = 1{,}7217\times 10^{-5}\ \mathrm{m/N}\), otrzymano:
+$$
+E = \frac{4 \cdot 1{,}075}{\pi \cdot (0{,}00076)^2 \cdot
+1{,}7217\times 10^{-5}}
+= 1{,}37636\times 10^{11}\ \mathrm{Pa}
+= 137{,}6\ \mathrm{GPa}.
+$$
 
-\[
-\frac{u(E)}{E} = \sqrt{0.002963} = 0.05442
+\subsection{Niepewność i wynik końcowy}
+
+Względne niepewności wielkości wejściowych:
+$$
+\frac{u(l)}{l}=\frac{0{,}002}{1{,}075}=0{,}00186,\qquad
+\frac{u(d)}{d}=\frac{0{,}00001}{0{,}00076}=0{,}01316,\qquad
+\frac{u(a)}{a}=\frac{8{,}194\times10^{-7}}{1{,}7217\times10^{-5}}
+=0{,}04760.
+$$
+Prawo przenoszenia niepewności względnych dla
+\(E = 4l/(\pi d^{2}a)\) daje:
+$$
+\left(\frac{u(E)}{E}\right)^2 =
+(0{,}00186)^2 + \bigl(2\cdot 0{,}01316\bigr)^2 + (0{,}04760)^2
+= 0{,}002963,
+$$
+stąd
+$$
+\frac{u(E)}{E} = 0{,}05442
 \quad\Rightarrow\quad
-u(E) = 0.05442 \times 1.37636\times10^{11} = 7.49\times10^{9}~\mathrm{Pa}
-\]
-
-Niepewność rozszerzona $U(E)$
-Dla współczynnika rozszerzenia \(k=2\) (ok. 95\% ufności):
-\[
-U(E) = k\cdot u(E) = 2 \times 7.49\times10^{9} = 1.50\times10^{10}~\mathrm{Pa}
-\]
+u(E) = 0{,}05442 \cdot 1{,}37636\times10^{11}
+= 7{,}49\times10^{9}\ \mathrm{Pa}.
+$$
+Dla współczynnika rozszerzenia \(k=2\):
+$$
+U(E) = 2\,u(E) = 1{,}50\times10^{10}\ \mathrm{Pa} = 15{,}0\ \mathrm{GPa}.
+$$
 
 \subsection*{Wynik końcowy}
-\[
-\boxed{E = (1.3764 \pm 0.0749)\times10^{11}~\mathrm{Pa} = (137.6 \pm 7.5)~\mathrm{GPa}}
-\]
-\[
-\boxed{U(E) = 1.50\times10^{10}~\mathrm{Pa} = 15.0~\mathrm{GPa}\quad(\text{dla } k=2)}
-\]
+$$
+\boxed{E = (1{,}376 \pm 0{,}075)\times 10^{11}\ \mathrm{Pa}
+= (137{,}6 \pm 7{,}5)\ \mathrm{GPa}}
+$$
+% k = 2 (niepewność rozszerzona)
+$$
+\boxed{E = (137{,}6 \pm 15{,}0)\ \mathrm{GPa}\quad (k=2)}
+$$
+
+Porównując z wartością tablicową dla stali \(E_t \approx 210\ \mathrm{GPa}\),
+stwierdzamy, że wynik \textbf{nie jest zgodny} w granicach niepewności rozszerzonej:
+$$
+|E_t - E| = |210 - 137{,}6| = 72{,}4\ \mathrm{GPa} > U(E) = 15{,}0\ \mathrm{GPa}.
+$$
+
+\subsection{Uwagi i wnioski}
+
+Otrzymany wynik jest znacznie mniejszy od wartości tablicowej.
+Prawdopodobną przyczyną jest fakt, że drut stalowy był mocno
+wyeksploatowany i w początkowej fazie obciążenia zamiast do wydłużania
+dochodziło do prostowania. W efekcie początkowe odkształcenia były
+znacznie większe niż wynikałoby to z prawa Hooke'a, co skutkowało
+zaniżeniem wyznaczonego modułu Younga. Dodatkowo, pomiary
+mogły być obarczone błędami wynikającymi z dużego tarcia w układzie
+dźwigni i czujnika, a także z niedokładności w pomiarze średnicy drutu.
 
 \pagebreak
 
-\section{Pomiary drutu mosiężnego}
-\begin{figure}[h!]
+\section{Wyniki pomiarów dla drutu mosiężnego}
+
+W tej części ćwiczenia badano zależność wydłużenia \(\Delta l\) od siły
+rozciągającej \(F\) dla drutu mosiężnego. Długość odcinka pomiarowego
+wynosiła \(l = 1{,}068\ \mathrm{m}\) przy niepewności
+\(u(l)=2\ \mathrm{mm}\). Średnicę zmierzono trzykrotnie:
+\(d_1=1{,}17\ \mathrm{mm},\ d_2=1{,}20\ \mathrm{mm},\ d_3=1{,}17\ \mathrm{mm}\);
+przyjęto \(\overline{d}=1{,}18\ \mathrm{mm}=0{,}00118\ \mathrm{m}\) oraz
+\(u(d)=0{,}01\ \mathrm{mm}\).
+Wydłużenie wyznaczano ze wskazań czujnika metodą
+\(\Delta l = (\mathrm{cz}\uparrow + \mathrm{cz}\downarrow)/4\).
+
+\begin{table}[H]
+  \centering
+  \caption{Pomiary wydłużenia drutu mosiężnego dla kolejnych obciążeń.}
+  \begin{tabular}{ccccccc}
+    \toprule
+    Lp. & \(m\)\,[kg] & \(F\)\,[N] &
+    cz \(\uparrow\)\,[mm] & cz \(\downarrow\)\,[mm] &
+    \(\Delta l\)\,[mm] & \(\Delta l\)\,[m] \\
+    \midrule
+    1 & 1 & 9{,}811 & 0{,}61 & 0{,}68 & 0{,}3225 & 0{,}0003225 \\
+    2 & 2 & 19{,}622 & 1{,}01 & 1{,}06 & 0{,}5175 & 0{,}0005175 \\
+    3 & 3 & 29{,}433 & 1{,}33 & 1{,}44 & 0{,}6925 & 0{,}0006925 \\
+    4 & 4 & 39{,}244 & 1{,}67 & 1{,}70 & 0{,}8425 & 0{,}0008425 \\
+    5 & 5 & 49{,}055 & 1{,}85 & 1{,}98 & 0{,}9575 & 0{,}0009575 \\
+    \bottomrule
+  \end{tabular}
+  \label{tab:mos_pomiary}
+\end{table}
+
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.9\textwidth]{mosiadz.png}
-  \caption{Wykres zależności wydłużenia mosiężnego pręta od siły doń przyłożonej.}
-  \label{rys:uklad_mosiadz}
-  \end{figure}
+  \caption{Wykres zależności wydłużenia drutu mosiężnego od przyłożonej siły.
+  Do punktów dopasowano prostą metodą najmniejszych kwadratów.}
+  \label{rys:uklad_mos}
+\end{figure}
 
-Korzystając z funkcji \texttt{REGLINP()} w programie Microsoft Excel,
-można wyznaczyć współczynnik kierunkowy prostej wraz z jego niepewnością.
-Otrzymano następujące wyniki:
-\[
-A = 0{,}00001625\ \frac{\mathrm{m}}{\mathrm{N}},
-\qquad
-u(A) = 0{,}00000092\ \frac{\mathrm{m}}{\mathrm{N}}.
-\]
+Dopasowanie liniowe zależności \(\Delta l(F) = a\,F + b\) wykonano w
+programie Microsoft Excel (\texttt{REGLINP/LINEST}).
+Otrzymano nachylenie:
+$$
+a = (1{,}6257 \pm 0{,}0924)\times 10^{-5}\ \mathrm{\tfrac{m}{N}},
+$$
+gdzie podana niepewność to \(u(a)=9{,}24389\times 10^{-7}\ \mathrm{m/N}\).
 
-\subsection{Obliczenia Modułu Younga}
+\subsection{Wyznaczenie modułu Younga}
 
-Obliczenie wartości $E$
-\[
-E = \frac{4 \cdot 1.068}{\pi \cdot (0.00117)^2 \cdot 1.626 \times 10^{-5}} = 6.01 \times 10^{10}~\mathrm{Pa} = 60.1~\mathrm{GPa}
-\]
+Korzystając z zależności \(E = \dfrac{4\,l}{\pi\,d^{2}\,a}\) oraz
+\(l = 1{,}068\ \mathrm{m},\ d=0{,}00118\ \mathrm{m},\
+a = 1{,}62573\times 10^{-5}\ \mathrm{m/N}\), otrzymano:
+$$
+E = \frac{4 \cdot 1{,}068}{\pi \cdot (0{,}00118)^2 \cdot
+1{,}62573\times 10^{-5}}
+= 6{,}0072\times 10^{10}\ \mathrm{Pa}
+= 60{,}07\ \mathrm{GPa}.
+$$
 
-Niepewność złożona $u(E)$
-\[
-\frac{u(l)}{l} = \frac{0.002}{1.068} = 0.00187, \quad
-\frac{u(d)}{d} = \frac{0.00001}{0.00117} = 0.00855, \quad
-\frac{u(a)}{a} = \frac{9.244\times10^{-7}}{1.626\times10^{-5}} = 0.05685
-\]
+\pagebreak
 
-\[
-\left( \frac{u(E)}{E} \right)^2 = (0.00187)^2 + (2 \times 0.00855)^2 + (0.05685)^2 = 0.00353
-\]
+\subsection{Niepewność i wynik końcowy}
 
-\[
-\frac{u(E)}{E} = 0.0594 \quad \Rightarrow \quad
-u(E) = 0.0594 \times 6.01\times10^{10} = 3.57\times10^{9}~\mathrm{Pa}
-\]
-
-Niepewność rozszerzona $U(E)$
-\[
-U(E) = k \cdot u(E) = 2 \times 3.57\times10^{9} = 7.14\times10^{9}~\mathrm{Pa}
-\]
+Względne niepewności wielkości wejściowych:
+$$
+\frac{u(l)}{l}=\frac{0{,}002}{1{,}068}=0{,}00187,\qquad
+\frac{u(d)}{d}=\frac{0{,}00001}{0{,}00118}=0{,}00847,\qquad
+\frac{u(a)}{a}=\frac{9{,}24389\times10^{-7}}{1{,}62573\times10^{-5}}
+=0{,}0569.
+$$
+Prawo przenoszenia niepewności względnych dla
+\(E = 4l/(\pi d^{2}a)\) daje:
+$$
+\left(\frac{u(E)}{E}\right) =
+\sqrt{(0{,}00187)^2 + \bigl(2\cdot 0{,}00847\bigr)^2 + (0{,}0569)^2}
+= 0{,}0594,
+$$
+stąd
+$$
+u(E) = 0{,}0594 \cdot 6{,}0072\times10^{10}
+= 3{,}57\times10^{9}\ \mathrm{Pa}
+= 3{,}57\ \mathrm{GPa}.
+$$
+Dla współczynnika rozszerzenia \(k=2\):
+$$
+U(E) = 2\,u(E) = 7{,}14\times10^{9}\ \mathrm{Pa}
+= 7{,}14\ \mathrm{GPa}.
+$$
 
 \subsection*{Wynik końcowy}
-\[
-\boxed{
-E = (6.01 \pm 0.36)\times10^{10}~\mathrm{Pa} = (60.1 \pm 3.6)~\mathrm{GPa}
-}
-\]
-\[
-\boxed{
-U(E) = 7.1\times10^{9}~\mathrm{Pa} = 7.1~\mathrm{GPa}
-}
-\]
-\[
-\Rightarrow \quad
-\boxed{E = (60.1 \pm 7.1)~\mathrm{GPa}} \quad \text{(dla } k=2,~95\%~\text{ufności)}
-\]
+% k = 1 (niepewność standardowa)
+$$
+\boxed{E = (6{,}01 \pm 0{,}36)\times 10^{10}\ \mathrm{Pa}
+= (60{,}07 \pm 3{,}57)\ \mathrm{GPa}}
+$$
+% k = 2 (niepewność rozszerzona)
+$$
+\boxed{E = (60{,}07 \pm 7{,}14)\ \mathrm{GPa}\quad (k=2)}
+$$
+
+\subsection{Ocena zgodności i uwagi}
+
+Literaturowo dla mosiądzu podaje się \(E \approx 90\text{--}110\ \mathrm{GPa}\).
+Otrzymany wynik \(E = 60{,}1\ \mathrm{GPa}\) jest istotnie mniejszy:
+różnica względem dolnej granicy \(90\ \mathrm{GPa}\) wynosi
+\(29{,}9\ \mathrm{GPa} > U(E)=7{,}14\ \mathrm{GPa}\),
+zatem wynik \textbf{nie jest zgodny} w granicach niepewności
+rozszerzonej. Możliwe przyczyny:
+- zawyżony pomiar średnicy \(d\) (E zależy jak \(1/d^{2}\));
+- zwiększone nachylenie \(a\) wskutek luzów, tarcia i histerezy
+w układzie dźwigni/czujnika lub wstępnego prostowania drutu;
+- różnice składu stopu (różne mosiądze mają odmienne \(E\));
+- niewystarczające wyeliminowanie punktów odstających przed dopasowaniem.
 
 \pagebreak
 \section{Wnioski}
-\begin{table}[h!]
-\centering
-\renewcommand{\arraystretch}{1.2}
-\begin{tabular}{|l|
-    >{\centering\arraybackslash}p{1.8cm}|
-    >{\centering\arraybackslash}p{2cm}|
-    >{\centering\arraybackslash}p{2cm}|
-    >{\centering\arraybackslash}p{2.8cm}|
-    >{\centering\arraybackslash}p{2cm}|}
-\hline
-\textbf{} &
-\textbf{Moduł Younga $E$ [GPa]} &
-\textbf{Wartość tablicowa $E_t$ [GPa]} &
-\textbf{Niepewność $u(E)$ [GPa]} &
-\textbf{Niepewność rozszerzona $U(E)$ [GPa]} &
-\textbf{$|E_t - E|$ [GPa]} \\ \hline
-Mosiądz & 60,1 & 100 & 3,6 & 7,1 & 39,9 \\ \hline
-Stal    & 137,6 & 210 & 7,5 & 15,0 & 72,4 \\ \hline
-\end{tabular}
-\caption{Wyniki końcowe doświadczenia}
-\end{table}
 
-Otrzymane wyniki znacząco odbiegają od wartości tablicowych (dla mosiądzu różnica wynosiła około 37,6~GPa, a dla stali 74,6~GPa).
-Powodem takiego stanu rzeczy mogą być mocno wyeksploatowane druty, dla których w początkowej fazie obciążenia zamiast do wydłużania, dochodziło do prostowania.
+W przeprowadzonym ćwiczeniu wyznaczono moduł Younga dla dwóch metali:
+stali i mosiądzu, stosując metodę statyczną pomiaru wydłużenia drutu
+pod wpływem obciążenia. Uzyskane zależności \(\Delta l(F)\) miały
+charakter liniowy, co potwierdza zgodność z prawem Hooke’a w zakresie
+sprężystym materiału.
+
+\bigskip
+\noindent
+Na podstawie nachylenia prostej i danych geometrycznych obliczono:
+\[
+  E_{\mathrm{stal}} = (137{,}6 \pm 15{,}0)\ \mathrm{GPa}\quad(k=2),
+  \qquad
+  E_{\mathrm{mos}} = (60{,}1 \pm 7{,}1)\ \mathrm{GPa}\quad(k=2).
+\]
+Dla porównania wartości tablicowe wynoszą odpowiednio
+\(E_{\mathrm{stal,tab}} = 210\text{--}220\ \mathrm{GPa}\) oraz
+\(E_{\mathrm{mos,tab}} = 90\text{--}110\ \mathrm{GPa}\).
+Oba wyniki są zaniżone w stosunku do danych tablicowych i
+\textbf{nie mieszczą się w granicach niepewności rozszerzonej},
+co wskazuje na występowanie błędów systematycznych w pomiarach.
+
+\bigskip
+\noindent
+Prawdopodobne przyczyny rozbieżności to:
+\begin{itemize}
+  \item niedokładność pomiaru wydłużenia spowodowana luzami lub tarciem
+    w mechanizmie dźwigni i czujnika mikrometrycznego,
+  \item nieidealne wyzerowanie układu pomiarowego,
+  \item wpływ prostowania drutu (szczególnie stalowego) w początkowej
+    fazie obciążania,
+  \item zawyżony pomiar średnicy drutu, która silnie wpływa na wynik
+    przez czynnik \(d^2\) we wzorze.
+\end{itemize}
+
+\bigskip
+\noindent
+Pomimo błędów ilościowych, uzyskane wyniki zachowują poprawne relacje:
+stal wykazuje wyraźnie wyższy moduł sprężystości niż mosiądz,
+co jest zgodne z teorią i charakterystyką materiałów.
+Eksperyment pokazał również, że metoda statyczna jest czuła na
+dokładność pomiaru wydłużenia, jednak prawidłowo odwzorowuje
+zależność liniową \(\Delta l(F)\), dzięki czemu może służyć do
+przybliżonego wyznaczania modułu Younga.
 
 \end{document}

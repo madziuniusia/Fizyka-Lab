@@ -89,6 +89,56 @@ Dokładność modelowania pola elektrostatycznego zależy od kilku czynników:
 
 \section{Wzory}
 
+\subsection{Kondensator płaski}
+
+Wewnątrz kondensatora pole jest jednorodne, a potencjał $V$ rośnie od zera dla elektrody uziemionej do wartości równej napięciu zasilania. Można go opisać wzorem:
+\begin{equation}
+E = \frac{U}{d}
+\end{equation}
+gdzie
+\begin{itemize}
+    \item $U$ -- napięcie generatora
+    \item $d$ -- odległość między okładkami
+\end{itemize}
+
+Korzystając z zależności $V = \int_{0}^{x} E \, dr$ dochodzimy do równania:
+\begin{equation}
+V(x) = \frac{U}{d} x
+\end{equation}
+gdzie $x$ to odległość danego punktu od dodatnio naładowanej okładki.
+
+\subsection{Kondensator cylindryczny}
+
+Przy założeniu, że potencjał elektrody zewnętrznej jest równy zero, wartość potencjału oraz natężenia pola elektrycznego w punkcie odległym o $r$ od osi kondensatora jest dana wzorem:
+\begin{equation}
+V(r) = \frac{U}{\ln\left(\frac{r_z}{r_w}\right)} \ln\left(\frac{r}{r_z}\right)
+\end{equation}
+gdzie:
+\begin{itemize}
+    \item $r_z$ -- promień zewnętrzny kondensatora
+    \item $r_w$ -- promień wewnętrzny kondensatora
+    \item $r$ -- odległość badanego punktu od środka kondensatora
+\end{itemize}
+
+Ponownie wykorzystując zależność $V = \int_{0}^{x} E \, dr$:
+\begin{equation}
+E(r) = -\frac{U}{r \ln\left(\frac{r_z}{r_w}\right)}
+\end{equation}
+
+\subsection{Doświadczalny sposób wyznaczania $E$}
+
+Pole elektrostatyczne pochodzi od nieruchomych ładunków, a jego rozkład określa się poprzez natężenie $E(x,y,z)$ i potencjał $V(x,y,z)$. Ze względu na trudności w bezpośrednim pomiarze pola, stosuje się modelowanie analogowe, zastępując pole elektrostatyczne łatwiejszym do pomiaru polem. Przykładem takiego modelu jest pole elektryczne przepływu prądu w obszarze o stałej oporności, gdzie pomiar napięcia umożliwia wyznaczenie potencjału i linii ekwipotencjalnych. Dzięki temu można na modelach płaskich badać rozkład pola elektrycznego niezależnie od długości kondensatora.
+
+W przypadku obszaru na zewnątrz kondensatora płaskiego, w celu obliczenia natężenia pola elektrycznego, można posłużyć się przybliżeniem gradientu potencjału obliczanego numerycznie:
+\begin{equation}
+\begin{aligned}
+E_x &= -\frac{\partial V}{\partial x} \approx \frac{V(x+h, y) - V(x, y)}{h} \\
+E_y &= -\frac{\partial V}{\partial y} \approx \frac{V(x, y+k) - V(x, y)}{k}
+\end{aligned}
+\end{equation}
+gdzie: $h$ i $k$ są odstępami między punktami siatki. W naszym przypadku przyjmujemy $h = k$.
+
+
 \section{Aparatura pomiarowa}
 
 \section{Wnioski}

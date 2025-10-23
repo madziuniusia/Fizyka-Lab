@@ -28,8 +28,8 @@ Pole elektrostatyczne jest przykładem \textbf{pola źródłowego}, wytwarzanego
 Dla porównania, przykładem \textbf{pola wirowego} jest pole magnetyczne – jego linie są zawsze zamknięte i nie mają początku ani końca. Inne pola wirowe spotyka się np. w przepływach cieczy i gazów (wir, tornado).
 
 \begin{figure}[h!]
-\centering
-\includegraphics[width=0.8\linewidth]{rysunek1.png}
+  \centering
+  \includegraphics[width=0.8\linewidth]{rysunek1.png}
 \caption{Przykładowe linie pola: a) źródłowego (elektrostatycznego), b) wirowego (magnetycznego)}
 \end{figure}
 
@@ -80,11 +80,11 @@ Poza przestrzenią między okładkami pole staje się niejednorodne i rozproszon
 \subsection*{Czynniki wpływające na dokładność modelowania pola}
 Dokładność modelowania pola elektrostatycznego zależy od kilku czynników:
 \begin{itemize}
-    \item jednorodności ośrodka przewodzącego (np. roztworu elektrolitu),
-    \item dokładności wyznaczania potencjałów i stabilności napięcia zasilania,
-    \item rozdzielczości siatki pomiarowej – im gęstsza, tym dokładniejszy wynik,
-    \item precyzji wykonania i rozmieszczenia elektrod,
-    \item wpływu brzegów i błędów pomiarowych woltomierza.
+\item jednorodności ośrodka przewodzącego (np. roztworu elektrolitu),
+\item dokładności wyznaczania potencjałów i stabilności napięcia zasilania,
+\item rozdzielczości siatki pomiarowej – im gęstsza, tym dokładniejszy wynik,
+\item precyzji wykonania i rozmieszczenia elektrod,
+\item wpływu brzegów i błędów pomiarowych woltomierza.
 \end{itemize}
 
 \section{Wzory}
@@ -97,8 +97,8 @@ E = \frac{U}{d}
 \end{equation}
 gdzie
 \begin{itemize}
-    \item $U$ -- napięcie generatora
-    \item $d$ -- odległość między okładkami
+\item $U$ -- napięcie generatora
+\item $d$ -- odległość między okładkami
 \end{itemize}
 
 Korzystając z zależności $V = \int_{0}^{x} E \, dr$ dochodzimy do równania:
@@ -115,9 +115,9 @@ V(r) = \frac{U}{\ln\left(\frac{r_z}{r_w}\right)} \ln\left(\frac{r}{r_z}\right)
 \end{equation}
 gdzie:
 \begin{itemize}
-    \item $r_z$ -- promień zewnętrzny kondensatora
-    \item $r_w$ -- promień wewnętrzny kondensatora
-    \item $r$ -- odległość badanego punktu od środka kondensatora
+\item $r_z$ -- promień zewnętrzny kondensatora
+\item $r_w$ -- promień wewnętrzny kondensatora
+\item $r$ -- odległość badanego punktu od środka kondensatora
 \end{itemize}
 
 Ponownie wykorzystując zależność $V = \int_{0}^{x} E \, dr$:
@@ -141,139 +141,81 @@ gdzie: $h$ i $k$ są odstępami między punktami siatki. W naszym przypadku przy
 \section{Aparatura pomiarowa}
 W skład układu pomiarowego wchodziły następujące elementy:
 \begin{itemize}
-    \item Płyty modelowe kondensatorów: płaskiego (rysunek \ref{fig:plaski}) i cylindrycznego (rysunek \ref{fig:cylindryczny}).
-    \item Woltomierz o dokładności $0{,}01$ V
-    \item Zasilacz
-    \item Sonda
-    \item Linijka o dokładności $1$ mm
+\item Płyty modelowe kondensatorów: płaskiego (rysunek \ref{fig:plaski}) i cylindrycznego (rysunek \ref{fig:cylindryczny}).
+\item Woltomierz o dokładności $0{,}01$ V
+\item Zasilacz
+\item Sonda
+\item Linijka o dokładności $1$ mm
 \end{itemize}
 
 \begin{figure}[h]
-    \centering
-    \begin{minipage}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{kondensator_plaski.png}
-        \caption{Obwód elektryczny do badania pola w kondensatorze płaskim}
-        \label{fig:plaski}
-    \end{minipage}
-    \hfill
-    \begin{minipage}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{kondensator_cylindryczny.png}
-        \caption{Schemat połączeń układu pomiarowego do modelowania pola elektrycznego}
-        \label{fig:cylindryczny}
-    \end{minipage}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{kondensator_plaski.png}
+\caption{Obwód elektryczny do badania pola w kondensatorze płaskim}
+\label{fig:plaski}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{kondensator_cylindryczny.png}
+\caption{Schemat połączeń układu pomiarowego do modelowania pola elektrycznego}
+\label{fig:cylindryczny}
+\end{minipage}
 \end{figure}
 \pagebreak
 
-\section{Wyniki pomiarów}
-\subsection{Kondensator płaski}
+\section{Kondensator płaski}
+
+\subsection{Wyniki pomiarów}
 Wyniki pomiarów dla kondensatora płaskiego o odległości między okładkami
 $d = 0.05$ m pod napięciem $U = 10.05$ V. Wartości doświadczalne potencjału $V_{\text{dośw}}$, które są średnią arytmetyczną pomiarów $V_a$, $V_b$, $V_c$, zostały porównane z wartościami teoretycznymi $V_{\text{teor}}$, które zostały wyznaczone za pomocą wzoru (6).
 
 \begin{table}[h]
-    \centering
-    \label{tab:kondensator_cylindryczny}
-    \begin{tabular}{|c|c|c|c|c|c|c|}
-        \hline
-        L.p. & $x$ [mm] & $V_a$ [V] & $V_b$ [V] & $V_c$ [V] & $V_{\text{dośw.}}$ [V] & $V_{\text{teor}}$ [V] \\
-        \hline
-        1 & 45 & 7.55 & 7.89 & 7.73 & 7.72 & 9.05 \\
-        2 & 40 & 6.70 & 7.06 & 6.98 & 6.91 & 8.04 \\
-        3 & 35 & 5.98 & 6.38 & 6.19 & 6.18 & 7.04 \\
-        4 & 30 & 5.23 & 5.70 & 5.42 & 5.45 & 6.03 \\
-        5 & 25 & 4.60 & 4.98 & 4.79 & 4.79 & 5.03 \\
-        6 & 20 & 3.87 & 4.22 & 3.94 & 4.01 & 4.02 \\
-        7 & 15 & 3.15 & 3.32 & 3.23 & 3.23 & 3.02 \\
-        8 & 10 & 2.38 & 2.70 & 2.53 & 2.54 & 2.01 \\
-        9 & 5 & 1.56 & 2.12 & 1.83 & 1.84 & 1.01 \\
-        \hline
-    \end{tabular}
-    \caption{Wyniki pomiarów potencjału dla kondensatora płaskiego}
+\centering
+\label{tab:kondensator_cylindryczny}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+L.p. & $x$ [mm] & $V_a$ [V] & $V_b$ [V] & $V_c$ [V] & $V_{\text{dośw.}}$ [V] & $V_{\text{teor}}$ [V] \\
+\hline
+1 & 45 & 7.55 & 7.89 & 7.73 & 7.72 & 9.05 \\
+2 & 40 & 6.70 & 7.06 & 6.98 & 6.91 & 8.04 \\
+3 & 35 & 5.98 & 6.38 & 6.19 & 6.18 & 7.04 \\
+4 & 30 & 5.23 & 5.70 & 5.42 & 5.45 & 6.03 \\
+5 & 25 & 4.60 & 4.98 & 4.79 & 4.79 & 5.03 \\
+6 & 20 & 3.87 & 4.22 & 3.94 & 4.01 & 4.02 \\
+7 & 15 & 3.15 & 3.32 & 3.23 & 3.23 & 3.02 \\
+8 & 10 & 2.38 & 2.70 & 2.53 & 2.54 & 2.01 \\
+9 & 5 & 1.56 & 2.12 & 1.83 & 1.84 & 1.01 \\
+\hline
+\end{tabular}
+\caption{Wyniki pomiarów potencjału dla kondensatora płaskiego}
 
 \end{table}
 
+Na podstawie tych danych, można sporządzić wykrez zależności potencjału
+otrzymanego doświadczalnie i teoretycznego od odległości od elektrody ujemnej
+
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.8\linewidth]{wykres_plaski.png}
+\includegraphics[width=0.85\linewidth]{wykres_plaski.png}
 \caption{Wykres przedstawiający wartości doświadczalne i teoretyczne potencjału V w zależności
 od odległości od okładki kondensatora}
 \end{figure}
 
 \pagebreak
 
-\subsection{Kondensator cylindryczny}
-Wyniki pomiarów dla kondensatora cylindrycznego o odległości między okładkami
-$\Delta r = r_{\text{zew}} - r_{\text{wew}} = 0{,}075$ m pod
-napięciem $U = 9.98$ V, gdzie $r_{\text{zew}} = 0{,}095$ m i
-$r_{\text{wew}} = 0{,}019$ m. Wartości doświadczalne potencjału
-$V_{\text{dośw}}$ zostały porównane z wartościami teoretycznymi
-$V_{\text{teor}}$, które zostały wyznaczone za pomocą wzoru (8).
-\begin{table}[h]
-    \centering
-    \label{tab:kondensator_plaski}
-    \begin{tabular}{|c|c|c|c|c|c|c|}
-       \hline
-        L.p. & $x$ [mm] & $V_a$ [V] & $V_b$ [V] & $V_c$ [V] & $V_{\text{dośw.}}$ [V] & $V_{\text{teor}}$ [V] \\
-        \hline
-        1 & 7 & 1.46 & 1.56 & 0.88 & 1.30 & 1.53 \\
-        2 & 14 & 1.91 & 1.91 & 1.18 & 1.67 & 2.45 \\
-        3 & 21 & 2.43 & 2.32 & 1.58 & 2.11 & 3.18 \\
-        4 & 28 & 2.89 & 2.83 & 2.13 & 2.62 & 3.81 \\
-        5 & 35 & 3.44 & 3.34 & 2.64 & 3.14 & 4.37 \\
-        6 & 42 & 4.13 & 3.85 & 3.18 & 3.72 & 4.88 \\
-        7 & 49 & 4.69 & 4.35 & 3.87 & 4.30 & 5.35 \\
-        8 & 56 & 5.46 & 5.13 & 4.73 & 5.11 & 5.79 \\
-        9 & 63 & 6.46 & 6.11 & 5.79 & 6.12 & 6.21 \\
-        10 & 70 & 7.53 & 7.77 & 7.05 & 7.45 & 6.61 \\
-        \hline
-    \end{tabular}
-    \caption{Wyniki pomiarów potencjału dla kondensatora cylindrycznego}
-\end{table}
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=0.8\linewidth]{wykres_cylindryczny.png}
-\caption{Wykres przedstawiający wartości doświadczalne i teoretyczne potencjału V w zależności od odległości od płytek kondensatora cylindrycznego}
-\end{figure}
-
-\section{Niepewności pomiarowe}
-Niepewności typu B wynikające z dokładności urządzeń pomiarowych
-zostały uwzględnione w wynikach przedstawionych w tabeli 1 i
-tabeli 2. Zwiększona wartość niepewności względem dokładności podanych w opisie aparatury wynika z uwzględnienia błędu ludzkiego podczas odczytu wartości oraz trudności związanych z operowaniem używanym multimetrem. Wynoszą one:
-\begin{equation}
-u_B(x) = 0{,}001\,\text{m}
-\label{eq:uB_x}
-\end{equation}
-\begin{equation}
-u_B(V) = 0{,}05\,\text{V}
-\label{eq:uB_V}
-\end{equation}
-
-Niepewność $E_{\text{dośw}}$ danego wzorem (4) można wyznaczyć korzystając z zasady przenoszenia niepewności, przyjmując dla każdego pomiaru $n$:
-\begin{equation}
-u(V_n) = u(V_{n+1}) = u_B(V) \quad \text{oraz} \quad u(x_n) = u(x_{n+1}) = u_B(x)
-\label{eq:niepewnosci}
-\end{equation}
-\begin{equation}
-u(E_{\text{dośw}}) = \sqrt{2 \cdot \left(\frac{u(V)}{x_{n+1} - x_n}\right)^2 + 2 \cdot \left(\frac{(x_{n+1} - x_n)^2 \cdot u(x)}{V_{n+1} - V_n}\right)^2}
-\label{eq:u_Edosw}
-\end{equation}
-
-\pagebreak
-\section{Wyznaczenie natężenia E pola elektrycznego}
-Dla sąsiednich współliniowych punktów wewnątrz kondensatora cylindrycznego i płaskiego średnie natężenie pola wyznacza się na podstawie dwóch kolejnych zmierzonych wartości potencjału w punktach $n$ oraz $n+1$. Otrzymaną wartość przypisuje się punktowi leżącemu w połowie odległości między tymi punktami, tzn. dla:
-\begin{equation}
-x^* = \frac{x_n + x_{n+1}}{2}
-\label{eq:x_star}
-\end{equation}
-natężenie pola elektrycznego wynosi:
-\begin{equation}
-E_{\text{dośw}} = \frac{V_{n+1} - V_n}{x_{n+1} - x_n}
-\label{eq:Edosw}
-\end{equation}
-
 \subsection{Doświadczalnie wyznaczone pole elektryczne E dla kondensatora płaskiego}
+
+Przy użyciu wzoru na natężenie pola elektrycznego
+\[
+E(x_i) = \frac{V(x_{i+1}) - V(x)}{x_{i+1} - x_i}
+\]
+i pomiarów z tabeli 1, możemy wyznaczyć natężenie pola elektrycznego w każdym z punktów $x^*$
+\[
+x^* = \frac{x_i + x_{i+1}}{2}
+\]
 
 \begin{table}[h]
 \centering
@@ -300,47 +242,119 @@ E_{\text{dośw}} = \frac{V_{n+1} - V_n}{x_{n+1} - x_n}
 \end{tabular}
 \end{table}
 
+Na podstawie powyżej tabeli, można sporządzić wykres zależności
+natężenia pola doświadczalnego i teoretycznego względem położenia
+między okładkami (odległośc od elektrody ujemnej)
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.85\linewidth]{wykres_plaski_e.png}
+\caption{Wykres przedstawiający wartości doświadczalne i teoretyczne natężenia E w zależności
+od odległości od okładki kondensatora}
+\end{figure}
+
+\subsection{Wnioski}
+Doświadczenie wykazało, że pomimo tego że wartości potencjału odbiegają od wartości teoretycznych,
+zachowują się w sposób oczekiwany, to jest liniowy, a wykres natężenia pola elektrycznego jest stały.
+Dodatkowo, linie pola układają się w charakterystyczne półokręgi i przypominają swoim kształtem
+pole magnetyczne magnesu podkowatego.
+
+Hey there, I need to model the electrical field inside and outside a flat capacitor. I have a list of measurements with coordinates, can you help me visualize the fields and voltages? The list of measurements is: no., x[mm], y[mm], voltage[V]. The coordinates are relative to the leftmost center measurement point, the first 3 columns of points are outside the capacitor, the next 3 are inside.
+\pagebreak
+
+\section{Kondensator cylindryczny}
+
+Wyniki pomiarów dla kondensatora cylindrycznego o odległości między okładkami
+$\Delta r = r_{\text{zew}} - r_{\text{wew}} = 0{,}075$ m pod
+napięciem $U = 9.98$ V, gdzie $r_{\text{zew}} = 0{,}095$ m i
+$r_{\text{wew}} = 0{,}02$ m. Wartości doświadczalne potencjału
+$V_{\text{dośw}}$ zostały porównane z wartościami teoretycznymi
+$V_{\text{teor}}$, które zostały wyznaczone za pomocą wzoru (7).
+\begin{table}[h]
+\centering
+\label{tab:kondensator_plaski}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+L.p. & $r$ [mm] & $V_a$ [V] & $V_b$ [V] & $V_c$ [V] & $V_{\text{dośw.}}$ [V] & $V_{\text{teor}}$ [V] \\
+\hline
+1 & 7 & 1.46 & 1.56 & 0.88 & 1.30 & 1.53 \\
+2 & 14 & 1.91 & 1.91 & 1.18 & 1.67 & 2.45 \\
+3 & 21 & 2.43 & 2.32 & 1.58 & 2.11 & 3.18 \\
+4 & 28 & 2.89 & 2.83 & 2.13 & 2.62 & 3.81 \\
+5 & 35 & 3.44 & 3.34 & 2.64 & 3.14 & 4.37 \\
+6 & 42 & 4.13 & 3.85 & 3.18 & 3.72 & 4.88 \\
+7 & 49 & 4.69 & 4.35 & 3.87 & 4.30 & 5.35 \\
+8 & 56 & 5.46 & 5.13 & 4.73 & 5.11 & 5.79 \\
+9 & 63 & 6.46 & 6.11 & 5.79 & 6.12 & 6.21 \\
+10 & 70 & 7.53 & 7.77 & 7.05 & 7.45 & 6.61 \\
+\hline
+\end{tabular}
+\caption{Wyniki pomiarów potencjału dla kondensatora cylindrycznego}
+\end{table}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\linewidth]{wykres_cylindryczny.png}
+\caption{Wykres przedstawiający wartości doświadczalne i teoretyczne potencjału V w zależności od odległości od płytek kondensatora cylindrycznego}
+\end{figure}
+
+\pagebreak
 \subsection{Doświadczalnie wyznaczone pole elektryczne E dla kondensatora cylindrycznego}
+
+Przy użyciu wzoru na natężenie pola elektrycznego
+\[
+E(r_i) = \frac{V(r_{i+1}) - V(r)}{r_{i+1} - r_i}
+\]
+i pomiarów z tabeli 2, możemy wyznaczyć natężenie pola elektrycznego w każdym z punktów $r^*$
+\[
+r^* = \frac{r_i + r_{i+1}}{2}
+\]
+
 \begin{table}[h]
 \centering
 \begin{tabular}{|c|c|c|c|}
 \hline
-\textbf{L.p.} & \textbf{$r$ [m]} & \textbf{$E_{\text{dośw}}$ [V/m]} & \textbf{$E_{\text{teor}}$ [V/m]} \\
+\textbf{L.p.} & \textbf{$r^*$ [m]} & \textbf{$E_{\text{dośw}}$ [V/m]} & \textbf{$E_{\text{teor}}$ [V/m]} \\
 \hline
-1 & 0.0505 & 190.00 & 191.03 \\
+1 & 0.0105 & 52.38 & 75.80 \\
 \hline
-2 & 0.0575 & 144.29 & 167.76 \\
+2 & 0.0175 & 63.33 & 82.65 \\
 \hline
-3 & 0.0645 & 115.71 & 149.58 \\
+3 & 0.0245 & 72.38 & 90.85 \\
 \hline
-4 & 0.0715 & 82.86 & 134.92 \\
+4 & 0.0315 & 74.76 & 100.87 \\
 \hline
-5 & 0.0785 & 82.86 & 122.90 \\
+5 & 0.0385 & 82.86 & 113.36 \\
 \hline
-6 & 0.0855 & 74.29 & 112.82 \\
+6 & 0.0455 & 83.33 & 129.40 \\
 \hline
-7 & 0.0925 & 72.86 & 104.29 \\
+7 & 0.0525 & 114.76 & 150.71 \\
 \hline
-8 & 0.0995 & 62.86 & 96.95 \\
+8 & 0.0595 & 144.76 & 180.42 \\
 \hline
-9 & 0.1065 & 52.86 & 90.58 \\
+9 & 0.0665 & 190.00 & 224.74 \\
 \hline
 \end{tabular}
 \label{tab:electric_field}
 \end{table}
 
-\section{Wnioski}
+Na podstawie powyżej tabeli, można sporządzić wykres zależności
+natężenia pola doświadczalnego i teoretycznego względem położenia
+między okładkami (odległośc od elektrody ujemnej)
 
-Doświadczenie wykazało, że wartości potencjału oraz natężenia pola elektrycznego
-wewnątrz kondensatora płaskiego pokrywają się z wartościami teoretycznymi,
-chociaż występują znaczące niedokładności.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.85\linewidth]{wykres_cylindryczny_e.png}
+\caption{Wykres przedstawiający wartości doświadczalne i teoretyczne natężenia E w zależności
+od odległości od okładki kondensatora}
+\end{figure}
+
+\subsection{Wnioski}
+
 Dla kondensatora cylindrycznego pomiary w znaczący sposób odbiegają od oczekiwanych
-wartości. Może być to spowodowane wadliwymi płytkami modelowymi, szczególnie przy
+wartości. Może być to spowodowane zużytymi płytkami modelowymi, szczególnie przy
 pomiarze c lub nieodpowiednim dociskiem sondy podczas zbierania pomiarów.
-
-Eksperyment pokazał, że natężenie pola wewnątrz kondensatora cylindrycznego
-zmienia się nieliniowo. Dodatkowo dla kondensatora płaskiego, linie pola układają
-się w charakterystyczne półokręgi i przypominają swoim kształtem pole magnetyczne
-magnesu podkowiastego.
+Eksperyment pokazał jednak, że natężenie pola wewnątrz kondensatora cylindrycznego
+zmienia się nieliniowo.
 
 \end{document}

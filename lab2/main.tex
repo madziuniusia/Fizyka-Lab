@@ -1,0 +1,362 @@
+\documentclass{fizykalab}
+
+% Ustawienia do tabelki
+
+\wydzial{WI}
+\autorjeden{Dawid Komęza}
+\autordwa{Magdalena Śmietana}
+\rok{II}
+\grupa{14}
+\zespol{2}
+\temat{Modelowanie pola elektrycznego}
+\nrcwiczenia{31}
+\datawykonania{17.10.2025}
+\dataoddaniajeden{24.10.2025}
+\zwrotdopoprawy{}
+\dataoddaniadwa{}
+\datazaliczenia{}
+
+\begin{document}
+
+\maketitle
+\section{Cel ćwiczenia}
+Celem ćwiczenia jest poznanie podstawowych właściwości pola elektrostatycznego oraz zasad jego modelowania. Zadanie obejmuje doświadczalne wyznaczenie powierzchni ekwipotencjalnych i odpowiadających im wektorów natężenia pola elektrycznego dla różnych konfiguracji elektrod.
+Dodatkowo, celem jest utrwalenie pojęć dotyczących pól wektorowych, praw Gaussa i Coulomba, rozkładu ładunku w przewodnikach, a także zależności między potencjałem a natężeniem pola elektrycznego.
+
+\section{Wstęp teoretyczny}
+Pole elektrostatyczne jest przykładem \textbf{pola źródłowego}, wytwarzanego przez nieruchome ładunki elektryczne. Do pól tego typu należą również pole grawitacyjne czy pole prędkości cieczy wypływającej ze źródła. Charakterystyczną cechą pól źródłowych jest to, że linie sił rozpoczynają się w źródłach (ładunkach dodatnich) i kończą w zlewach (ładunkach ujemnych).
+Dla porównania, przykładem \textbf{pola wirowego} jest pole magnetyczne – jego linie są zawsze zamknięte i nie mają początku ani końca. Inne pola wirowe spotyka się np. w przepływach cieczy i gazów (wir, tornado).
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\linewidth]{rysunek1.png}
+\caption{Przykładowe linie pola: a) źródłowego (elektrostatycznego), b) wirowego (magnetycznego)}
+\end{figure}
+
+\subsection*{Prawo Coulomba i prawo Gaussa}
+Podstawowym prawem opisującym oddziaływanie ładunków punktowych jest \textbf{prawo Coulomba}:
+\begin{equation}
+\vec{F} = k \frac{q_1 q_2}{r^2} \hat{r},
+\end{equation}
+gdzie $k = \frac{1}{4 \pi \varepsilon_0}$, a $\varepsilon_0$ to przenikalność elektryczna próżni.
+Wynika z niego, że siła wzajemnego oddziaływania ładunków jest proporcjonalna do iloczynu ich wartości, a odwrotnie proporcjonalna do kwadratu odległości.
+
+\textbf{Prawo Gaussa} dla pola elektrostatycznego stwierdza, że całkowity strumień wektora natężenia pola elektrycznego $\vec{E}$ przez dowolną powierzchnię zamkniętą jest równy ładunkowi całkowitemu wewnątrz tej powierzchni podzielonemu przez $\varepsilon_0$:
+\begin{equation}
+\oint_S \vec{E} \cdot d\vec{S} = \frac{Q_{wew}}{\varepsilon_0}.
+\end{equation}
+Prawo to jest szczególnie użyteczne przy obliczaniu rozkładu pola o symetrii kulistej, cylindrycznej lub płaskiej.
+
+\subsection*{Pole dipola elektrycznego}
+Dipol elektryczny składa się z dwóch ładunków o przeciwnych znakach i jednakowych wartościach, oddzielonych pewną odległością $l$. Linie sił pola wychodzą z ładunku dodatniego i wchodzą w ładunek ujemny, tworząc charakterystyczny układ zamkniętych krzywych. Linie ekwipotencjalne są do nich zawsze prostopadłe.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.75\linewidth]{rysunek2.png}
+\caption{Przybliżony rozkład linii pola i linii ekwipotencjalnych dla dipola elektrycznego.}
+\end{figure}
+
+\subsection*{Przewodniki w polu elektrostatycznym}
+W stanie równowagi elektrostatycznej wewnątrz przewodnika pole elektryczne jest równe zeru, ponieważ ładunki swobodne przemieszczają się po powierzchni tak długo, aż potencjał wyrówna się w całym przewodniku. W rezultacie, \textbf{linie pola elektrostatycznego są prostopadłe do powierzchni metalu} i kończą się na niej.
+Rozkład ładunku elektrycznego występuje wyłącznie na powierzchni przewodnika, szczególnie w miejscach o dużej krzywiźnie (np. ostrzach), gdzie zagęszczenie linii pola jest największe.
+
+\subsection*{Pole w kondensatorze płaskim}
+Kondensator płaski tworzą dwie równoległe elektrody oddalone o odległość $d$. Między nimi powstaje w przybliżeniu \textbf{jednorodne pole elektryczne}, którego natężenie opisuje wzór:
+\begin{equation}
+E = \frac{U}{d}.
+\end{equation}
+Potencjał rośnie liniowo od elektrody uziemionej do dodatniej:
+\begin{equation}
+V(x) = \frac{U}{d}x.
+\end{equation}
+Poza przestrzenią między okładkami pole staje się niejednorodne i rozproszone.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.7\linewidth]{rysunek3.jpeg}
+\caption{Rozkład pola elektrycznego wewnątrz kondensatora płaskiego.}
+\end{figure}
+
+\subsection*{Czynniki wpływające na dokładność modelowania pola}
+Dokładność modelowania pola elektrostatycznego zależy od kilku czynników:
+\begin{itemize}
+\item jednorodności ośrodka przewodzącego (np. roztworu elektrolitu),
+\item dokładności wyznaczania potencjałów i stabilności napięcia zasilania,
+\item rozdzielczości siatki pomiarowej – im gęstsza, tym dokładniejszy wynik,
+\item precyzji wykonania i rozmieszczenia elektrod,
+\item wpływu brzegów i błędów pomiarowych woltomierza.
+\end{itemize}
+
+\section{Wzory}
+
+\subsection{Kondensator płaski}
+
+Wewnątrz kondensatora pole jest jednorodne, a potencjał $V$ rośnie od zera dla elektrody uziemionej do wartości równej napięciu zasilania. Można go opisać wzorem:
+\begin{equation}
+E = \frac{U}{d}
+\end{equation}
+gdzie
+\begin{itemize}
+\item $U$ -- napięcie generatora
+\item $d$ -- odległość między okładkami
+\end{itemize}
+
+Korzystając z zależności $V = \int_{0}^{x} E \, dr$ dochodzimy do równania:
+\begin{equation}
+V(x) = \frac{U}{d} x
+\end{equation}
+gdzie $x$ to odległość danego punktu od dodatnio naładowanej okładki.
+
+\subsection{Kondensator cylindryczny}
+
+Przy założeniu, że potencjał elektrody zewnętrznej jest równy zero, wartość potencjału oraz natężenia pola elektrycznego w punkcie odległym o $r$ od osi kondensatora jest dana wzorem:
+\begin{equation}
+V(r) = \frac{U}{\ln\left(\frac{r_z}{r_w}\right)} \ln\left(\frac{r}{r_z}\right)
+\end{equation}
+gdzie:
+\begin{itemize}
+\item $r_z$ -- promień zewnętrzny kondensatora
+\item $r_w$ -- promień wewnętrzny kondensatora
+\item $r$ -- odległość badanego punktu od środka kondensatora
+\end{itemize}
+
+Ponownie wykorzystując zależność $V = \int_{0}^{x} E \, dr$:
+\begin{equation}
+E(r) = -\frac{U}{r \ln\left(\frac{r_z}{r_w}\right)}
+\end{equation}
+
+\subsection{Doświadczalny sposób wyznaczania $E$}
+
+Pole elektrostatyczne pochodzi od nieruchomych ładunków, a jego rozkład określa się poprzez natężenie $E(x,y,z)$ i potencjał $V(x,y,z)$. Ze względu na trudności w bezpośrednim pomiarze pola, stosuje się modelowanie analogowe, zastępując pole elektrostatyczne łatwiejszym do pomiaru polem. Przykładem takiego modelu jest pole elektryczne przepływu prądu w obszarze o stałej oporności, gdzie pomiar napięcia umożliwia wyznaczenie potencjału i linii ekwipotencjalnych. Dzięki temu można na modelach płaskich badać rozkład pola elektrycznego niezależnie od długości kondensatora.
+
+W przypadku obszaru na zewnątrz kondensatora płaskiego, w celu obliczenia natężenia pola elektrycznego, można posłużyć się przybliżeniem gradientu potencjału obliczanego numerycznie:
+\begin{equation}
+\begin{aligned}
+E_x &= -\frac{\partial V}{\partial x} \approx \frac{V(x+h, y) - V(x, y)}{h} \\
+E_y &= -\frac{\partial V}{\partial y} \approx \frac{V(x, y+k) - V(x, y)}{k}
+\end{aligned}
+\end{equation}
+gdzie: $h$ i $k$ są odstępami między punktami siatki. W naszym przypadku przyjmujemy $h = k$.
+
+\section{Aparatura pomiarowa}
+W skład układu pomiarowego wchodziły następujące elementy:
+\begin{itemize}
+\item Płyty modelowe kondensatorów: płaskiego (rysunek \ref{fig:plaski}) i cylindrycznego (rysunek \ref{fig:cylindryczny}).
+\item Woltomierz o dokładności $0{,}01$ V
+\item Zasilacz
+\item Sonda
+\item Linijka o dokładności $1$ mm
+\end{itemize}
+
+\begin{figure}[h]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{kondensator_plaski.png}
+\caption{Obwód elektryczny do badania pola w kondensatorze płaskim}
+\label{fig:plaski}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{kondensator_cylindryczny.png}
+\caption{Schemat połączeń układu pomiarowego do modelowania pola elektrycznego}
+\label{fig:cylindryczny}
+\end{minipage}
+\end{figure}
+\pagebreak
+
+\section{Kondensator płaski}
+
+\subsection{Wyniki pomiarów}
+Wyniki pomiarów dla kondensatora płaskiego o odległości między okładkami
+$d = 0.05$ m pod napięciem $U = 10.05$ V. Wartości doświadczalne potencjału $V_{\text{dośw}}$, które są średnią arytmetyczną pomiarów $V_a$, $V_b$, $V_c$, zostały porównane z wartościami teoretycznymi $V_{\text{teor}}$, które zostały wyznaczone za pomocą wzoru (6).
+
+\begin{table}[h]
+\centering
+\label{tab:kondensator_cylindryczny}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+L.p. & $x$ [mm] & $V_a$ [V] & $V_b$ [V] & $V_c$ [V] & $V_{\text{dośw.}}$ [V] & $V_{\text{teor}}$ [V] \\
+\hline
+1 & 45 & 7.55 & 7.89 & 7.73 & 7.72 & 9.05 \\
+2 & 40 & 6.70 & 7.06 & 6.98 & 6.91 & 8.04 \\
+3 & 35 & 5.98 & 6.38 & 6.19 & 6.18 & 7.04 \\
+4 & 30 & 5.23 & 5.70 & 5.42 & 5.45 & 6.03 \\
+5 & 25 & 4.60 & 4.98 & 4.79 & 4.79 & 5.03 \\
+6 & 20 & 3.87 & 4.22 & 3.94 & 4.01 & 4.02 \\
+7 & 15 & 3.15 & 3.32 & 3.23 & 3.23 & 3.02 \\
+8 & 10 & 2.38 & 2.70 & 2.53 & 2.54 & 2.01 \\
+9 & 5 & 1.56 & 2.12 & 1.83 & 1.84 & 1.01 \\
+\hline
+\end{tabular}
+\caption{Wyniki pomiarów potencjału dla kondensatora płaskiego}
+
+\end{table}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.65\linewidth]{wykres_plaski.png}
+\caption{Wykres przedstawiający wartości doświadczalne i teoretyczne potencjału V w zależności
+od odległości od okładki kondensatora}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.75\linewidth]{pole.png}
+\caption{Wykres przedstawiający pole elektryczne i linie ekwipotencjalne wewnątrz i na zewnątrz kondensatora płaskiego}
+\end{figure}
+
+\pagebreak
+
+\subsection{Doświadczalnie wyznaczone pole elektryczne E dla kondensatora płaskiego}
+
+Przy użyciu wzoru na natężenie pola elektrycznego
+\[
+E(x_i) = \frac{V(x_{i+1}) - V(x)}{x_{i+1} - x_i}
+\]
+i pomiarów z tabeli 1, możemy wyznaczyć natężenie pola elektrycznego w każdym z punktów $x^*$
+\[
+x^* = \frac{x_i + x_{i+1}}{2}
+\]
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{L.p.} & \textbf{$x^*$ [m]} & \textbf{$E_{\text{dośw}}$ [V/m]} & \textbf{$E_{\text{teor}}$ [V/m]} \\
+\hline
+1 & 0.0425 & 162.00 & 201.0 \\
+\hline
+2 & 0.0375 & 146.00 & 201.0 \\
+\hline
+3 & 0.0325 & 146.67 & 201.0 \\
+\hline
+4 & 0.0275 & 132.00 & 201.0 \\
+\hline
+5 & 0.0225 & 156.00 & 201.0 \\
+\hline
+6 & 0.0175 & 155.33 & 201.0 \\
+\hline
+7 & 0.0125 & 139.33 & 201.0 \\
+\hline
+8 & 0.0075 & 140.00 & 201.0 \\
+\hline
+\end{tabular}
+\end{table}
+
+Na podstawie powyżej tabeli, można sporządzić wykres zależności
+natężenia pola doświadczalnego i teoretycznego względem położenia
+między okładkami (odległośc od elektrody ujemnej)
+
+\begin{figure}
+\centering
+\includegraphics[width=0.85\linewidth]{wykres_plaski_e.png}
+\caption{Wykres przedstawiający wartości doświadczalne i teoretyczne natężenia E w zależności
+od odległości od okładki kondensatora}
+\end{figure}
+
+\subsection{Wnioski}
+Doświadczenie wykazało, że pomimo tego że wartości potencjału odbiegają od wartości teoretycznych,
+zachowują się w sposób oczekiwany, to jest liniowy, a wykres natężenia pola elektrycznego jest stały.
+Dodatkowo, linie pola układają się w charakterystyczne półokręgi i przypominają swoim kształtem
+pole magnetyczne magnesu podkowatego.
+
+\pagebreak
+
+\section{Kondensator cylindryczny}
+
+Wyniki pomiarów dla kondensatora cylindrycznego o odległości między okładkami
+$\Delta r = r_{\text{zew}} - r_{\text{wew}} = 0{,}075$ m pod
+napięciem $U = 9.98$ V, gdzie $r_{\text{zew}} = 0{,}095$ m i
+$r_{\text{wew}} = 0{,}02$ m. Wartości doświadczalne potencjału
+$V_{\text{dośw}}$ zostały porównane z wartościami teoretycznymi
+$V_{\text{teor}}$, które zostały wyznaczone za pomocą wzoru (7).
+\begin{table}[h]
+\centering
+\label{tab:kondensator_plaski}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+L.p. & $r$ [mm] & $V_a$ [V] & $V_b$ [V] & $V_c$ [V] & $V_{\text{dośw.}}$ [V] & $V_{\text{teor}}$ [V] \\
+\hline
+1 & 7 & 1.46 & 1.56 & 0.88 & 1.30 & 1.53 \\
+2 & 14 & 1.91 & 1.91 & 1.18 & 1.67 & 2.45 \\
+3 & 21 & 2.43 & 2.32 & 1.58 & 2.11 & 3.18 \\
+4 & 28 & 2.89 & 2.83 & 2.13 & 2.62 & 3.81 \\
+5 & 35 & 3.44 & 3.34 & 2.64 & 3.14 & 4.37 \\
+6 & 42 & 4.13 & 3.85 & 3.18 & 3.72 & 4.88 \\
+7 & 49 & 4.69 & 4.35 & 3.87 & 4.30 & 5.35 \\
+8 & 56 & 5.46 & 5.13 & 4.73 & 5.11 & 5.79 \\
+9 & 63 & 6.46 & 6.11 & 5.79 & 6.12 & 6.21 \\
+10 & 70 & 7.53 & 7.77 & 7.05 & 7.45 & 6.61 \\
+\hline
+\end{tabular}
+\caption{Wyniki pomiarów potencjału dla kondensatora cylindrycznego}
+\end{table}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\linewidth]{wykres_cylindryczny.png}
+\caption{Wykres przedstawiający wartości doświadczalne i teoretyczne potencjału V w zależności od odległości od płytek kondensatora cylindrycznego}
+\end{figure}
+
+\pagebreak
+\subsection{Doświadczalnie wyznaczone pole elektryczne E dla kondensatora cylindrycznego}
+
+Przy użyciu wzoru na natężenie pola elektrycznego
+\[
+E(r_i) = \frac{V(r_{i+1}) - V(r)}{r_{i+1} - r_i}
+\]
+i pomiarów z tabeli 2, możemy wyznaczyć natężenie pola elektrycznego w każdym z punktów $r^*$
+\[
+r^* = \frac{r_i + r_{i+1}}{2}
+\]
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{L.p.} & \textbf{$r^*$ [m]} & \textbf{$E_{\text{dośw}}$ [V/m]} & \textbf{$E_{\text{teor}}$ [V/m]} \\
+\hline
+1 & 0.0105 & 52.38 & 75.80 \\
+\hline
+2 & 0.0175 & 63.33 & 82.65 \\
+\hline
+3 & 0.0245 & 72.38 & 90.85 \\
+\hline
+4 & 0.0315 & 74.76 & 100.87 \\
+\hline
+5 & 0.0385 & 82.86 & 113.36 \\
+\hline
+6 & 0.0455 & 83.33 & 129.40 \\
+\hline
+7 & 0.0525 & 114.76 & 150.71 \\
+\hline
+8 & 0.0595 & 144.76 & 180.42 \\
+\hline
+9 & 0.0665 & 190.00 & 224.74 \\
+\hline
+\end{tabular}
+\label{tab:electric_field}
+\end{table}
+
+Na podstawie powyżej tabeli, można sporządzić wykres zależności
+natężenia pola doświadczalnego i teoretycznego względem położenia
+między okładkami (odległośc od elektrody ujemnej)
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.85\linewidth]{wykres_cylindryczny_e.png}
+\caption{Wykres przedstawiający wartości doświadczalne i teoretyczne natężenia E w zależności
+od odległości od okładki kondensatora}
+\end{figure}
+
+\subsection{Wnioski}
+
+Dla kondensatora cylindrycznego pomiary w odbiegają od oczekiwanych
+wartości. Może być to spowodowane zużytymi płytkami modelowymi, szczególnie przy
+pomiarze c lub nieodpowiednim dociskiem sondy podczas zbierania pomiarów.
+Eksperyment pokazał jednak, że natężenie pola wewnątrz kondensatora cylindrycznego
+zmienia się nieliniowo.
+
+\end{document}

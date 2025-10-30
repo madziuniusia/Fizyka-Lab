@@ -35,6 +35,13 @@
 % Fizyka
 \RequirePackage{siunitx}
 
+% Marginesy
+\RequirePackage[a4paper,
+  left=4cm,
+  right=4cm,
+  top=2.5cm,
+bottom=2.5cm]{geometry}
+
 % Definicje do tabelki
 
 \newcommand\wydzial[1]{\def\@wydzial{#1}}
@@ -54,23 +61,23 @@
 % Tabelka
 
 \renewcommand\maketitle{
-\begin{table}[H]
-\begin{adjustbox}{center}
-\begin{tabular}{|l|l|l|l|l|l|}
-\hline
- Wydział& \multicolumn{2}{l|}{Imię i nazwisko} & Rok & Grupa & Zespół  \\ 
- \multicolumn{1}{|c|}{\multirow{2}{*}{\textbf{\@wydzial}}} &\multicolumn{2}{l|}{\textbf{\@autorjeden}} & \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{\@rok}}} & \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{\@grupa}}} & \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{\@zespol}}}\\ 
- &\multicolumn{2}{l|}{\textbf{\@autordwa}}   &&&\\ \hline
- \multicolumn{1}{|c|}{\textbf{PRACOWNIA}} & \multicolumn{4}{l|}{Temat:} & Nr ćwiczenia  \\ 
- \multicolumn{1}{|c|}{\textbf{FIZYCZNA}} & \multicolumn{4}{l|}{\textbf{\@temat}} & \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{\@nrcwiczenia}}}\\ 
- \multicolumn{1}{|c|}{\textbf{WFiIS AGH}} & \multicolumn{4}{l|}{} & \\ \hline
- Data wykonania & Data oddania      & Zwrot do popr.      & Data oddania      & Data zaliczenia & OCENA\\
- \multicolumn{1}{|c|}{\multirow{2}{*}{\textbf{\@datawykonania}}} & \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{\@dataoddaniajeden}}} &
- \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{\@zwrotdopoprawy}}} &
- \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{\@dataoddaniadwa}}} &
- \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{\@datazaliczenia}}} & \\
- & & & & & \\ \hline
-\end{tabular}
-\end{adjustbox}
-\end{table}
+  \begin{table}[H]
+    \begin{adjustbox}{center}
+      \begin{tabular}{|l|l|l|l|l|l|}
+        \hline
+        Wydział& \multicolumn{2}{l|}{Imię i nazwisko} & Rok & Grupa & Zespół  \\
+        \multicolumn{1}{|c|}{\multirow{2}{*}{\textbf{\@wydzial}}} &\multicolumn{2}{l|}{\textbf{\@autorjeden}} & \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{\@rok}}} & \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{\@grupa}}} & \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{\@zespol}}}\\
+        &\multicolumn{2}{l|}{\textbf{\@autordwa}}   &&&\\ \hline
+        \multicolumn{1}{|c|}{\textbf{PRACOWNIA}} & \multicolumn{4}{l|}{Temat:} & Nr ćwiczenia  \\
+        \multicolumn{1}{|c|}{\textbf{FIZYCZNA}} & \multicolumn{4}{l|}{\textbf{\@temat}} & \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{\@nrcwiczenia}}}\\
+        \multicolumn{1}{|c|}{\textbf{WFiIS AGH}} & \multicolumn{4}{l|}{} & \\ \hline
+        Data wykonania & Data oddania      & Zwrot do popr.      & Data oddania      & Data zaliczenia & OCENA\\
+        \multicolumn{1}{|c|}{\multirow{2}{*}{\textbf{\@datawykonania}}} & \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{\@dataoddaniajeden}}} &
+        \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{\@zwrotdopoprawy}}} &
+        \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{\@dataoddaniadwa}}} &
+        \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{\@datazaliczenia}}} & \\
+        & & & & & \\ \hline
+      \end{tabular}
+    \end{adjustbox}
+  \end{table}
 }

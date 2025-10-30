@@ -1,3 +1,5 @@
 */build/*
 !*/build/main.pdf
 template/build
+
+.DS_Store

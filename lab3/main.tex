@@ -265,7 +265,6 @@ Zgodnie z instrukcją wyznaczono wartości średnie (typ A):
 W dalszych obliczeniach przyjmujemy \(c = \bar{c}\) oraz \(R = \bar{R}\),
 z zachowaniem tej samej biegunowości podłączeń co w cechowaniu.
 
-\bigskip
 \subsection{Opis wykresu i interpretacja}
 
 Na podstawie danych z tabeli~\ref{tab:halotron_cechy} sporządzono wykres
@@ -282,7 +281,6 @@ napięcia Halla, zgodnie z równaniem \(U_H = c I B\).
   \label{fig:halotron_cechowanie}
 \end{figure}
 
-\pagebreak
 \section{Rozkład pola magnetycznego wzdłuż osi cewki}
 
 Warunki pomiaru: prąd halotronu \(I_h = 14\,\mathrm{mA}\),
@@ -307,10 +305,11 @@ W tej sekcji: \(R_{\mathrm{c}}\) oznacza promień cewki (geometria),
 natomiast \(R_{\mathrm{off}}\) to składowa rezystancyjna w równaniu
 pomiarowym halotronu.
 
+\pagebreak
 \subsection{Wyniki}
 \begin{table}[h]
   \centering
-  \caption{Tabela 2. Pomiary napięcia \(U(x)\) i indukcji \(B\) wzdłuż osi cewki.
+  \caption{Pomiary napięcia \(U(x)\) i indukcji \(B\) wzdłuż osi cewki.
     \(B_{\mathrm{rz}}\) — wartość wyznaczona z napięcia (halotron),
   \(B_{\mathrm{teo}}\) — wartość teoretyczna dla cewki kołowej.}
   \label{tab:t2}
@@ -346,9 +345,9 @@ pomiarowym halotronu.
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.75\textwidth]{indukcja-cewka.png}
-  \caption{Wykres 2. Rozkład \(B(x)\) wyznaczony z pomiarów (punkty)
+  \caption{Rozkład \(B(x)\) wyznaczony z pomiarów (punkty)
   oraz krzywa teoretyczna \(B_{\mathrm{teo}}(x)\) (linia).}
-  \label{fig:wykres2}
+  \label{fig:wykres}
 \end{figure}
 
 \noindent
@@ -397,7 +396,7 @@ Przykład (dla \(x=0\)):
 \begin{figure}[h!]
   \centering
   \includegraphics[width=1\textwidth]{indukcja-magnes.png}
-  \caption{Wykres 3. Rozkład indukcji magnetycznej \(B(x)\) magnesu ferrytowego.}
+  \caption{Rozkład indukcji magnetycznej \(B(x)\) magnesu ferrytowego.}
   \label{fig:indukcja-magnes}
 \end{figure}
 
@@ -410,6 +409,14 @@ z części B otrzymano \(B_0 \approx 7.76\,\mathrm{mT}\), zatem przy \(x=0\)
 magnes daje około 35-krotnie większą indukcję niż cewka dla \(I_s=9.7\,\mathrm{A}\).
 
 \pagebreak
+
 \section{Wnioski}
+\begin{enumerate}
+\item Napięcie Halla zmienia się liniowo wraz z indukcją pola magnetycznego, co potwierdza zależność \(U_H = cIB\). Wyznaczono stałą halotronu \(c = (95.28 \pm 1.60)\,\mathrm{V/(A\cdot T)}\) oraz opór \(R = (-0.387 \pm 0.051)\,\Omega\).
+
+\item Rozkład pola magnetycznego cewki jest zgodny z teorią, choć wartości doświadczalne są nieco niższe od obliczonych. Różnice mogą wynikać z niedokładnego ustawienia halotronu lub wpływu pól zewnętrznych, w szczególności stanowisk sąsiadujących i ich zasilaczy.
+
+\item Indukcja pola magnesu ferrytowego maleje wraz z odległością, zgodnie z przewidywaniami. Przy powierzchni magnesu \(|B| \approx 0.27\,\mathrm{T}\), a dla większych odległości wartości są znikome w granicach błędu pomiaru.
+\end{enumerate}
 
 \end{document}

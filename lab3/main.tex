@@ -1,4 +1,5 @@
 \documentclass{fizykalab}
+\usepackage{amsmath,amssymb}
 
 % Ustawienia do tabelki
 
@@ -253,10 +254,16 @@ Na ich podstawie obliczono:
   c_{10} = 94{,}58\ \mathrm{V/(A\cdot T)},\qquad
   c_{14} = 93{,}06\ \mathrm{V/(A\cdot T)}.
 \]
-Średnia wartość stałej halotronu wyniosła:
+
+Zgodnie z instrukcją wyznaczono wartości średnie (typ A):
+
 \[
-  \boxed{c_{\mathrm{avg}} = 95{,}2\ \mathrm{V/(A\cdot T)}}.
+  \bar{c} = (95.28 \pm 1.60)\,\mathrm{V/(A\cdot T)}, \qquad
+  \bar{R} = (-0.387 \pm 0.051)\,\Omega.
 \]
+
+W dalszych obliczeniach przyjmujemy \(c = \bar{c}\) oraz \(R = \bar{R}\),
+z zachowaniem tej samej biegunowości podłączeń co w cechowaniu.
 
 \bigskip
 \subsection{Opis wykresu i interpretacja}
@@ -267,9 +274,94 @@ Każda z krzywych ma charakter liniowy, co potwierdza prawidłową
 reakcję sensora na zmianę indukcji pola magnetycznego.
 Zwiększenie natężenia prądu halotronu powoduje proporcjonalny wzrost
 napięcia Halla, zgodnie z równaniem \(U_H = c I B\).
-Otrzymane wartości \(c\) mieszczą się w typowym zakresie
-dla czujników półprzewodnikowych, co potwierdza poprawność
-przeprowadzonego cechowania.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{cechowanie.png}
+  \caption{Cechowanie halotronu: zależność napięcia Halla \(U\) od prądu cewki \(I_c\) dla trzech wartości prądu halotronu \(I\).}
+  \label{fig:halotron_cechowanie}
+\end{figure}
+
+\pagebreak
+\section{Rozkład pola magnetycznego wzdłuż osi cewki}
+
+Warunki pomiaru: prąd halotronu \(I_h = 14\,\mathrm{mA}\),
+prąd cewki \(I_s = 9.7\,\mathrm{A}\), liczba zwojów \(N = 70\),
+promień cewki \(R_{\mathrm{c}} = 0.055\,\mathrm{m}\).
+Do przeliczeń \(B\) z napięcia wykorzystano zależność
+\(U = c\,I_h\,B + R_{\mathrm{off}}\,I_h\) oraz
+\(B = \big(U - R_{\mathrm{off}} I_h\big)/(c I_h)\) z parametrami \(c\) i
+\(R_{\mathrm{off}}\) wyznaczonymi w części A (cechowanie).
+
+\bigskip
+Zależność teoretyczna dla cewki kołowej na osi:
+$$
+B_0 = \frac{\mu_0 N I_s}{2 R_{\mathrm{c}}}
+\approx 7.76\,\mathrm{mT}, \qquad
+B_{\mathrm{teo}}(x) =
+\frac{B_0}{\left(1 + \frac{x^2}{R_{\mathrm{c}}^2}\right)^{3/2}}.
+$$
+
+\paragraph{Uwaga dotycząca oznaczeń.}
+W tej sekcji: \(R_{\mathrm{c}}\) oznacza promień cewki (geometria),
+natomiast \(R_{\mathrm{off}}\) to składowa rezystancyjna w równaniu
+pomiarowym halotronu.
+
+\subsection{Wyniki}
+\begin{table}[h]
+  \centering
+  \caption{Tabela 2. Pomiary napięcia \(U(x)\) i indukcji \(B\) wzdłuż osi cewki.
+    \(B_{\mathrm{rz}}\) — wartość wyznaczona z napięcia (halotron),
+  \(B_{\mathrm{teo}}\) — wartość teoretyczna dla cewki kołowej.}
+  \label{tab:t2}
+  \begin{tabular}{cccc}
+    \hline
+    \(x\) [cm] & \(U\) [mV] & \(B_{\mathrm{rz}}\) [mT] & \(B_{\mathrm{teo}}\) [mT] \\
+    \hline
+    0.0  &  3.15 & 6.59 & 7.76 \\
+    0.5  &  2.95 & 6.44 & 7.66 \\
+    1.0  &  2.61 & 6.18 & 7.39 \\
+    1.5  &  2.02 & 5.74 & 6.97 \\
+    2.0  &  1.41 & 5.28 & 6.44 \\
+    2.5  &  0.68 & 4.74 & 5.85 \\
+    3.0  & -0.12 & 4.14 & 5.25 \\
+    3.5  & -0.85 & 3.59 & 4.66 \\
+    4.0  & -1.50 & 3.10 & 4.10 \\
+    4.5  & -2.15 & 2.61 & 3.60 \\
+    5.0  & -2.78 & 2.14 & 3.14 \\
+    5.5  & -3.31 & 1.74 & 2.74 \\
+    6.0  & -3.78 & 1.39 & 2.39 \\
+    6.5  & -4.19 & 1.08 & 2.09 \\
+    7.0  & -4.55 & 0.81 & 1.83 \\
+    7.5  & -4.84 & 0.59 & 1.60 \\
+    8.0  & -5.07 & 0.42 & 1.41 \\
+    8.5  & -4.20 & 1.07 & 1.24 \\
+    9.0  & -4.25 & 1.04 & 1.10 \\
+    9.5  & -4.40 & 0.92 & 0.98 \\
+    10.0 & -4.45 & 0.89 & 0.87 \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.75\textwidth]{indukcja-cewka.png}
+  \caption{Wykres 2. Rozkład \(B(x)\) wyznaczony z pomiarów (punkty)
+  oraz krzywa teoretyczna \(B_{\mathrm{teo}}(x)\) (linia).}
+  \label{fig:wykres2}
+\end{figure}
+
+\noindent
+Porównanie z teorią: w zakresie \(x \in [0, 8]\,\mathrm{cm}\) wartości
+\(B_{\mathrm{rz}}\) są niższe od \(B_{\mathrm{teo}}\) niemal o stałą
+różnicę rzędu \(\approx 1.0\text{-}1.2\,\mathrm{mT}\)
+(\(B(0)\): \(6.59\,\mathrm{mT}\) vs \(7.76\,\mathrm{mT}\)).
+Dla większych odległości (\(x \gtrsim 8.5\,\mathrm{cm}\)) wyniki
+zbliżają się do krzywej teoretycznej. Można to wygłumaczyć wpływem
+stanowiska pomiarowego sąsiada (w punkcie \(x=8.5\,\mathrm{cm}\)),
+zasilacz sąsiadującego stanowiska został wyłączony.
+
+\pagebreak
 \section{Wnioski}
 
 \end{document}

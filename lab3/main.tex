@@ -379,19 +379,88 @@ Przykład (dla \(x=0\)):
 
 \begin{table}[h]
   \centering
-  \caption{Indukcja pola magnesu ferrytowego w funkcji odległości.}
+  \caption{Indukcja pola magnesu ferrytowego w funkcji odległości wraz z niepewnością pomiaru.}
   \label{tab:magnes}
-  \begin{tabular}{ccc}
+  \begin{tabular}{cccc}
     \hline
-    \(x\) [cm] & \(U\) [mV] & \(B\) [mT] \\
+    \(x\) [cm] & \(U\) [mV] & \(B\) [mT] & \(u(B)\) [mT] \\
     \hline
-    0   &  -370   & -273.37 \\
-    1   &   -67.2 &  -46.19 \\
-    5   &    -8.1 &   -1.85 \\
-    10  &    -6.37&   -0.55 \\
+    0   &  -370.0   & -273.37 &  $\pm$3.02 \\
+    1   &   -67.2   &  -46.19 &  $\pm$0.53 \\
+    5   &    -8.1   &   -1.85 &  $\pm$0.05 \\
+    10  &    -6.37  &   -0.55 &  $\pm$0.05 \\
     \hline
   \end{tabular}
 \end{table}
+
+\noindent
+\subsection*{Niepewność pomiaru indukcji magnetycznej}
+Niepewność złożoną obliczono zgodnie ze wzorem:
+Niepewność złożoną indukcji magnetycznej \(u(B)\) obliczono metodą propagacji niepewności:
+
+\[
+u(B) = \sqrt{
+\left(
+\frac{\partial B}{\partial U}\,u(U)
+\right)^2 +
+\left(
+\frac{\partial B}{\partial c}\,u(c)
+\right)^2 +
+\left(
+\frac{\partial B}{\partial I}\,u(I)
+\right)^2 +
+\left(
+\frac{\partial B}{\partial R}\,u(R)
+\right)^2
+}.
+\]
+
+Po podstawieniu pochodnych z równania
+\(
+B = \frac{U - R I}{c\,I}
+\)
+otrzymujemy:
+
+\[
+u(B) =
+\sqrt{
+\left(
+\frac{u(U)}{cI}
+\right)^2 +
+\left[
+\left(
+\frac{R}{c^2} - \frac{U}{c^2 I}
+\right)u(c)
+\right]^2 +
+\left(
+\frac{U}{c I^2}u(I)
+\right)^2 +
+\left(
+\frac{u(R)}{c}
+\right)^2
+}.
+\]
+
+Po wyłączeniu \(1/c\) przed nawias:
+
+\[
+u(B) = \frac{1}{c}\,
+\sqrt{
+\left(
+\frac{u(U)}{I}
+\right)^2 +
+\left[
+\left(
+\frac{R}{c} - \frac{U}{c I}
+\right)u(c)
+\right]^2 +
+\left(
+\frac{U}{I^2}u(I)
+\right)^2 +
+\big(u(R)\big)^2
+}.
+\]
+\pagebreak
 
 \begin{figure}[h!]
   \centering
@@ -407,9 +476,7 @@ magnesów ferrytowych i silnie maleje z odległością (\(\sim 1/r^3\) dla
 odległości większych od rozmiarów magnesu). Dla porównania, w środku cewki
 z części B otrzymano \(B_0 \approx 7.76\,\mathrm{mT}\), zatem przy \(x=0\)
 magnes daje około 35-krotnie większą indukcję niż cewka dla \(I_s=9.7\,\mathrm{A}\).
-
-\pagebreak
-
+\bigbreak
 \section{Wnioski}
 \begin{enumerate}
 \item Napięcie Halla zmienia się liniowo wraz z indukcją pola magnetycznego, co potwierdza zależność \(U_H = cIB\). Wyznaczono stałą halotronu \(c = (95.28 \pm 1.60)\,\mathrm{V/(A\cdot T)}\) oraz opór \(R = (-0.387 \pm 0.051)\,\Omega\).

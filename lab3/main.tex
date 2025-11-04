@@ -362,6 +362,54 @@ stanowiska pomiarowego sąsiada (w punkcie \(x=8.5\,\mathrm{cm}\)),
 zasilacz sąsiadującego stanowiska został wyłączony.
 
 \pagebreak
+
+\section{Magnes ferrytowy}
+
+Warunki: prąd halotronu \(I_h = 14\,\mathrm{mA}\).
+Do przeliczeń użyto parametrów z cechowania:
+\(c = 95.28\,\mathrm{V/(A\cdot T)}\) oraz
+\(R_{\mathrm{off}} = -0.387\,\Omega\).
+Indukcję wyznaczano ze wzoru
+\[
+  B = \frac{U - R_{\mathrm{off}} I_h}{c\, I_h}.
+\]
+Przykład (dla \(x=0\)):
+\(\,U=-370\,\mathrm{mV}\Rightarrow
+  B=\frac{-0.370 - (-0.387\cdot 0.014)}{95.28\cdot 0.014}
+\approx -0.273\,\mathrm{T}\).
+
+\begin{table}[h]
+  \centering
+  \caption{Indukcja pola magnesu ferrytowego w funkcji odległości.}
+  \label{tab:magnes}
+  \begin{tabular}{ccc}
+    \hline
+    \(x\) [cm] & \(U\) [mV] & \(B\) [mT] \\
+    \hline
+    0   &  -370   & -273.37 \\
+    1   &   -67.2 &  -46.19 \\
+    5   &    -8.1 &   -1.85 \\
+    10  &    -6.37&   -0.55 \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{indukcja-magnes.png}
+  \caption{Wykres 3. Rozkład indukcji magnetycznej \(B(x)\) magnesu ferrytowego.}
+  \label{fig:indukcja-magnes}
+\end{figure}
+
+Znak ujemny oznacza zwrot wektora \(\mathbf{B}\) przeciwny do konwencji
+przyjętej w cechowaniu; wartości bezwzględne odpowiadają modułowi indukcji.
+Wynik przy powierzchni (\(|B|\approx 0.27\,\mathrm{T}\)) jest typowy dla
+magnesów ferrytowych i silnie maleje z odległością (\(\sim 1/r^3\) dla
+odległości większych od rozmiarów magnesu). Dla porównania, w środku cewki
+z części B otrzymano \(B_0 \approx 7.76\,\mathrm{mT}\), zatem przy \(x=0\)
+magnes daje około 35-krotnie większą indukcję niż cewka dla \(I_s=9.7\,\mathrm{A}\).
+
+\pagebreak
 \section{Wnioski}
 
 \end{document}

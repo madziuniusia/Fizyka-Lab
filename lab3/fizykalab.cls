@@ -42,6 +42,8 @@
   top=2.5cm,
 bottom=2.5cm]{geometry}
 
+\RequirePackage{changepage}
+
 % Definicje do tabelki
 
 \newcommand\wydzial[1]{\def\@wydzial{#1}}

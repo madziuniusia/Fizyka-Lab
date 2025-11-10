@@ -1,4 +1,5 @@
 \documentclass{fizykalab}
+\usepackage{amsmath,amssymb}
 
 % Ustawienia do tabelki
 
@@ -28,36 +29,36 @@ Celem ćwiczenia jest cechowanie halotronu przy użyciu pola magnetycznego o zna
 \subsection{Pole elektryczne i natężenie pola elektrycznego}
 Wektor natężenia pola elektrycznego $\mathbf{E}$ definiujemy jako siłę działającą na jednostkowy ładunek dodatni:
 \begin{equation}
-    \mathbf{E} = \frac{\mathbf{F}}{q}
+  \mathbf{E} = \frac{\mathbf{F}}{q}
 \end{equation}
 
 \subsection{Potencjał i napięcie}
 Napięcie elektryczne $U$ między dwoma punktami A i B to różnica potencjałów:
 \begin{equation}
-    U_{AB} = V_A - V_B
+  U_{AB} = V_A - V_B
 \end{equation}
 
 Praca wykonana przez pole elektryczne przy przenoszeniu ładunku $q$:
 \begin{equation}
-    W = qU_{AB} = q\int_A^B \mathbf{E} \cdot d\mathbf{l}
+  W = qU_{AB} = q\int_A^B \mathbf{E} \cdot d\mathbf{l}
 \end{equation}
 
 \subsection{Prawo Ohma}
 Wersja makroskopowa:
 \begin{equation}
-    U = IR
+  U = IR
 \end{equation}
 
 Wersja mikroskopowa:
 \begin{equation}
-    \mathbf{j} = \sigma \mathbf{E}
+  \mathbf{j} = \sigma \mathbf{E}
 \end{equation}
 gdzie $\sigma$ jest przewodnością elektryczną, a $\mathbf{j}$ gęstością prądu.
 
 \subsection{Gęstość prądu, prędkość unoszenia i koncentracja nośników}
 Gęstość prądu: $\mathbf{j} = \frac{I}{S}$, prędkość unoszenia $\mathbf{v}$ to średnia prędkość nośników, koncentracja $n$ to liczba nośników w jednostce objętości. Związek między nimi:
 \begin{equation}
-    \mathbf{j} = nq\mathbf{v}
+  \mathbf{j} = nq\mathbf{v}
 \end{equation}
 
 \subsection{Pole magnetyczne}
@@ -67,27 +68,27 @@ Linie pola wokół prostoliniowego przewodnika tworzą okręgi koncentryczne (ki
 
 \subsection{Prawo Biota-Savarta}
 \begin{equation}
-    d\mathbf{B} = \frac{\mu_0}{4\pi} \frac{I d\mathbf{l} \times \mathbf{r}}{r^3}
+  d\mathbf{B} = \frac{\mu_0}{4\pi} \frac{I d\mathbf{l} \times \mathbf{r}}{r^3}
 \end{equation}
 
 Dla przewodnika kołowego o promieniu $R$ indukcja w środku:
 \begin{equation}
-    B = \frac{\mu_0 I}{2R}
+  B = \frac{\mu_0 I}{2R}
 \end{equation}
 
 Dla cewki z $N$ zwojami:
 \begin{equation}
-    B_0 = \frac{\mu_0 N I}{2R}
+  B_0 = \frac{\mu_0 N I}{2R}
 \end{equation}
 
 \subsection{Siła Lorentza}
 \begin{equation}
-    \mathbf{F} = q(\mathbf{E} + \mathbf{v} \times \mathbf{B})
+  \mathbf{F} = q(\mathbf{E} + \mathbf{v} \times \mathbf{B})
 \end{equation}
 
 W jednorodnym polu magnetycznym ładunek poruszający się prostopadle do $\mathbf{B}$ wykonuje ruch po okręgu o promieniu:
 \begin{equation}
-    r = \frac{mv}{qB}
+  r = \frac{mv}{qB}
 \end{equation}
 
 Przy składowej prędkości równoległej do $\mathbf{B}$ tor jest spiralny.
@@ -95,76 +96,396 @@ Przy składowej prędkości równoległej do $\mathbf{B}$ tor jest spiralny.
 \subsection{Zjawisko Halla}
 
 \begin{figure}[h]
-\centering
-\includegraphics[width=0.6\textwidth]{halotron.png}
-\caption{Schematyczne przedstawienie zasady działania halotronu}
-\label{fig:halotron}
+  \centering
+  \includegraphics[width=0.6\textwidth]{halotron.png}
+  \caption{Schematyczne przedstawienie zasady działania halotronu}
+  \label{fig:halotron}
 \end{figure}
 
 Napięciem Halla nazywamy różnicę potencjałów powstającą w przewodniku z prądem umieszczonym w polu magnetycznym. Na elektrony w halotronie działa siła Lorentza:
 \begin{equation}
-    \mathbf{F} = q\mathbf{v} \times \mathbf{B}
+  \mathbf{F} = q\mathbf{v} \times \mathbf{B}
 \end{equation}
 
 Dla napięcia Halla $U_H$ występuje pole elektryczne $E_H = \frac{U_H}{d}$. Na elektrony działa więc siła:
 \begin{equation}
-    F_E = q \cdot E_H
+  F_E = q \cdot E_H
 \end{equation}
 
 Obie te siły działają w przeciwnych kierunkach i w stanie równowagi otrzymujemy:
 \begin{equation}
-    U_H = vBd
-    \label{eq:uh1}
+  U_H = vBd
+  \label{eq:uh1}
 \end{equation}
 
 Gęstość prądu wyrażamy jako $j = \frac{I}{dh}$, a przyjmując $n$ jako koncentrację nośników (liczba nośników prądu w jednostce objętości), mamy:
 \begin{equation}
-    j = vnq
-    \label{eq:j}
+  j = vnq
+  \label{eq:j}
 \end{equation}
 
 Łącząc równania~\eqref{eq:uh1} i~\eqref{eq:j} otrzymujemy:
 \begin{equation}
-    U_H = \frac{1}{nqh}IB
-    \label{eq:uh2}
+  U_H = \frac{1}{nqh}IB
+  \label{eq:uh2}
 \end{equation}
 
 Współczynnik proporcjonalności $c = \frac{1}{nqh}$ to stała halotronu.
 
 W efekcie oporu warstwy półprzewodnika zastosowanego do budowy halotronu powstaje dodatkowe napięcie $U_R$ proporcjonalne do prądu halotronu. Mierzone napięcie wynosi więc:
 \begin{equation}
-    U = U_H + U_R = cIB + RI
-    \label{eq:utotal}
+  U = U_H + U_R = cIB + RI
+  \label{eq:utotal}
 \end{equation}
 
 \subsection{Indukcja na osi cewki}
 Natężenie pola magnetycznego na osi cewki kołowej liczymy korzystając z prawa Biota-Savarta. Wynosi ono:
 \begin{equation}
-    B_0 = \frac{\mu_0 N I_s}{2R}
-    \label{eq:b0}
+  B_0 = \frac{\mu_0 N I_s}{2R}
+  \label{eq:b0}
 \end{equation}
 
 Wykonując pomiary na osi solenoidu w odległości $z$ od jego środka otrzymujemy następujący wzór na indukcję magnetyczną:
 \begin{equation}
-    B(z) = \frac{B_0}{\left(1 + \frac{z^2}{R^2}\right)^{3/2}}
-    \label{eq:bz}
+  B(z) = \frac{B_0}{\left(1 + \frac{z^2}{R^2}\right)^{3/2}}
+  \label{eq:bz}
 \end{equation}
 
 \section{Aparatura pomiarowa}
 \begin{figure}[h!]
-\centering
-\includegraphics[width=0.6\textwidth]{halotron_uklad.png}
-\caption{Schemat układu pomiarowego halotronu}
-\label{fig:halotron_uklad}
+  \centering
+  \includegraphics[width=0.6\textwidth]{halotron_uklad.png}
+  \caption{Schemat układu pomiarowego halotronu}
+  \label{fig:halotron_uklad}
 \end{figure}
 
 W skład układu pomiarowego weszły następujące elementy:
 \begin{enumerate}
-    \item Halotron wraz z zasilaczem oraz podłączonymi miliamperomierzem i woltomierzem, a także potencjometrem regulującym natężenie prądu.
-    \item Cewka z zasilaczem, regulacją prądu oraz amperomierzem.
+  \item Halotron wraz z zasilaczem oraz podłączonymi miliamperomierzem i woltomierzem, a także potencjometrem regulującym natężenie prądu.
+  \item Cewka z zasilaczem, regulacją prądu oraz amperomierzem.
 \end{enumerate}
 
+\pagebreak
 
+\section{Cechowanie halotronu}
+
+Celem tej części ćwiczenia było \textbf{wyznaczenie charakterystyki halotronu},
+czyli zależności napięcia Halla \(U_H\) od indukcji magnetycznej \(B\)
+generowanej przez cewkę kołową. W doświadczeniu mierzono napięcie \(U\)
+w funkcji natężenia prądu zasilającego cewkę \(I_c\) dla trzech ustalonych
+wartości prądu halotronu:
+\(I = 5\ \mathrm{mA},\ 10\ \mathrm{mA}\) oraz \(14\ \mathrm{mA}\).
+
+Halotron był umieszczony centralnie w środku cewki, gdzie pole magnetyczne
+opisuje równanie wynikające z prawa Biota–Savarta:
+$$
+B = \frac{\mu_0 N I_c}{2R}.
+$$
+Dla tej konfiguracji napięcie Halla jest proporcjonalne do natężenia pola:
+$$
+U_H = c\,I\,B,
+$$
+gdzie \(c\) oznacza stałą halotronu, charakterystyczną dla danego sensora.
+
+\bigskip
+\subsection{Dane układu pomiarowego}
+
+\begin{center}
+  \begin{tabular}{|l|c|}
+    \hline
+    Liczba zwojów cewki \(N\) & 70 \\
+    \hline
+    Średnica cewki \(D\) & 110 mm \\
+    \hline
+    Promień cewki \(R = D/2\) & 55 mm = 0{,}055 m \\
+    \hline
+    Maksymalny prąd cewki \(I_c^{\mathrm{max}}\) & 10 A \\
+    \hline
+    Stała magnetyczna \(\mu_0\) & \(4\pi\times10^{-7}\ \mathrm{H/m}\) \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\bigskip
+\subsection{Wyniki pomiarów}
+
+Pomiary wykonano trzykrotnie dla kolejnych wartości prądów halotronu.
+Napięcie \(U\) mierzono w milivoltach (\(\mathrm{mV}\)).
+Uzyskane wyniki zestawiono w tabeli~\ref{tab:halotron_cechy}.
+
+\begin{table}[H]
+  \begin{adjustwidth}{-2cm}{-2cm}  % extend table 1 cm into each margin
+    \centering
+    \caption{Zależność napięcia Halla \(U\) od prądu cewki \(I_c\).}
+    \resizebox{1.30\textwidth}{!}{% optional scaling factor if you want a little extra width
+      \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+        \hline
+        \(I_c\)\,[A] & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 7.9 & 8.8 & 9.7 \\
+        \hline
+        \(B\)\,[mT] & 0 & $8.00\times10^{-4}$ & $1.60\times10^{-3}$ & $2.40\times10^{-3}$ &
+        $3.20\times10^{-3}$ & $4.00\times10^{-3}$ & $4.80\times10^{-3}$ & $5.60\times10^{-3}$ &
+        $6.32\times10^{-3}$ & $7.04\times10^{-3}$ & $7.76\times10^{-3}$ \\
+        \hline
+        \(U\)\,[mV], \(I=5\ \mathrm{mA}\) & -1.45 & -1.06 & -0.67 & -0.25 & 0.12 & 0.50 & 0.87 & 1.26 & 1.64 & 2.01 & 2.37 \\
+        \hline
+        \(U\)\,[mV], \(I=10\ \mathrm{mA}\) & -4.70 & -3.80 & -3.20 & -2.42 & -1.60 & -0.82 & -0.10 & 0.54 & 1.26 & 2.00 & 2.75 \\
+        \hline
+        \(U\)\,[mV], \(I=14\ \mathrm{mA}\) & -6.00 & -4.30 & -3.43 & -2.45 & -1.38 & -0.45 & 0.55 & 1.55 & 2.55 & 3.56 & 4.52 \\
+        \hline
+      \end{tabular}%
+    }
+    \label{tab:halotron_cechy}
+  \end{adjustwidth}
+\end{table}
+
+\bigskip
+\subsection{Opracowanie i analiza wyników}
+
+Dla każdej serii pomiarów sporządzono wykres zależności \(U = f(I_c)\).
+Otrzymane krzywe są liniowe,
+co potwierdza prawidłowość zależności \(U_H \propto B\) oraz jej
+równoległość z prądem halotronu \(I\).
+Wykonując regresję liniową uzyskano wartości współczynników nachylenia
+\(a_5\), \(a_{10}\) oraz \(a_{14}\), będących proporcjonalnych do stałej
+halotronu \(c\).
+Na ich podstawie obliczono:
+\[
+  c_5 = 97{,}97\ \mathrm{V/(A\cdot T)},\qquad
+  c_{10} = 94{,}58\ \mathrm{V/(A\cdot T)},\qquad
+  c_{14} = 93{,}06\ \mathrm{V/(A\cdot T)}.
+\]
+
+Zgodnie z instrukcją wyznaczono wartości średnie (typ A):
+
+\[
+  \bar{c} = (95.28 \pm 1.60)\,\mathrm{V/(A\cdot T)}, \qquad
+  \bar{R} = (-0.387 \pm 0.051)\,\Omega.
+\]
+
+W dalszych obliczeniach przyjmujemy \(c = \bar{c}\) oraz \(R = \bar{R}\),
+z zachowaniem tej samej biegunowości podłączeń co w cechowaniu.
+
+\subsection{Opis wykresu i interpretacja}
+
+Na podstawie danych z tabeli~\ref{tab:halotron_cechy} sporządzono wykres
+\(U=f(I_c)\) dla trzech wartości prądu halotronu.
+Każda z krzywych ma charakter liniowy, co potwierdza prawidłową
+reakcję sensora na zmianę indukcji pola magnetycznego.
+Zwiększenie natężenia prądu halotronu powoduje proporcjonalny wzrost
+napięcia Halla, zgodnie z równaniem \(U_H = c I B\).
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{cechowanie.png}
+  \caption{Cechowanie halotronu: zależność napięcia Halla \(U\) od prądu cewki \(I_c\) dla trzech wartości prądu halotronu \(I\).}
+  \label{fig:halotron_cechowanie}
+\end{figure}
+
+\section{Rozkład pola magnetycznego wzdłuż osi cewki}
+
+Warunki pomiaru: prąd halotronu \(I_h = 14\,\mathrm{mA}\),
+prąd cewki \(I_s = 9.7\,\mathrm{A}\), liczba zwojów \(N = 70\),
+promień cewki \(R_{\mathrm{c}} = 0.055\,\mathrm{m}\).
+Do przeliczeń \(B\) z napięcia wykorzystano zależność
+\(U = c\,I_h\,B + R_{\mathrm{off}}\,I_h\) oraz
+\(B = \big(U - R_{\mathrm{off}} I_h\big)/(c I_h)\) z parametrami \(c\) i
+\(R_{\mathrm{off}}\) wyznaczonymi w części A (cechowanie).
+
+\bigskip
+Zależność teoretyczna dla cewki kołowej na osi:
+$$
+B_0 = \frac{\mu_0 N I_s}{2 R_{\mathrm{c}}}
+\approx 7.76\,\mathrm{mT}, \qquad
+B_{\mathrm{teo}}(x) =
+\frac{B_0}{\left(1 + \frac{x^2}{R_{\mathrm{c}}^2}\right)^{3/2}}.
+$$
+
+\paragraph{Uwaga dotycząca oznaczeń.}
+W tej sekcji: \(R_{\mathrm{c}}\) oznacza promień cewki (geometria),
+natomiast \(R_{\mathrm{off}}\) to składowa rezystancyjna w równaniu
+pomiarowym halotronu.
+
+\pagebreak
+\subsection{Wyniki}
+\begin{table}[h]
+  \centering
+  \caption{Pomiary napięcia \(U(x)\) i indukcji \(B\) wzdłuż osi cewki.
+    \(B_{\mathrm{rz}}\) — wartość wyznaczona z napięcia (halotron),
+    \(B_{\mathrm{teo}}\) — wartość teoretyczna dla cewki kołowej,
+    \(u(B)\) — złożona niepewność pomiaru indukcji.}
+  \label{tab:t2_unc}
+  \begin{tabular}{ccccc}
+    \hline
+    \(x\) [cm] & \(U\) [mV] & \(B_{\mathrm{rz}}\) [mT] & \(B_{\mathrm{teo}}\) [mT] & \(u(B)\) [mT] \\
+    \hline
+    0.0  &  3.15 & 6.59 & 7.76 & $\pm$0.54 \\
+    0.5  &  2.95 & 6.44 & 7.66 & $\pm$0.55 \\
+    1.0  &  2.61 & 6.18 & 7.39 & $\pm$0.55 \\
+    1.5  &  2.02 & 5.74 & 6.97 & $\pm$0.55 \\
+    2.0  &  1.41 & 5.28 & 6.44 & $\pm$0.55 \\
+    2.5  &  0.68 & 4.74 & 5.85 & $\pm$0.55 \\
+    3.0  & -0.12 & 4.14 & 5.25 & $\pm$0.54 \\
+    3.5  & -0.85 & 3.59 & 4.66 & $\pm$0.54 \\
+    4.0  & -1.50 & 3.10 & 4.10 & $\pm$0.54 \\
+    4.5  & -2.15 & 2.61 & 3.60 & $\pm$0.54 \\
+    5.0  & -2.78 & 2.14 & 3.14 & $\pm$0.54 \\
+    5.5  & -3.31 & 1.74 & 2.74 & $\pm$0.54 \\
+    6.0  & -3.78 & 1.39 & 2.39 & $\pm$0.54 \\
+    6.5  & -4.19 & 1.08 & 2.09 & $\pm$0.54 \\
+    7.0  & -4.55 & 0.81 & 1.83 & $\pm$0.54 \\
+    7.5  & -4.84 & 0.59 & 1.60 & $\pm$0.54 \\
+    8.0  & -5.07 & 0.42 & 1.41 & $\pm$0.54 \\
+    8.5  & -4.20 & 1.07 & 1.24 & $\pm$0.54 \\
+    9.0  & -4.25 & 1.04 & 1.10 & $\pm$0.54 \\
+    9.5  & -4.40 & 0.92 & 0.98 & $\pm$0.54 \\
+    10.0 & -4.45 & 0.89 & 0.87 & $\pm$0.54 \\
+    \hline
+  \end{tabular}
+\end{table}
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.75\textwidth]{indukcja-cewka.png}
+  \caption{Rozkład \(B(x)\) wyznaczony z pomiarów (punkty)
+  oraz krzywa teoretyczna \(B_{\mathrm{teo}}(x)\) (linia).}
+  \label{fig:wykres}
+\end{figure}
+
+\noindent
+Porównanie z teorią: w zakresie \(x \in [0, 8]\,\mathrm{cm}\) wartości
+\(B_{\mathrm{rz}}\) są niższe od \(B_{\mathrm{teo}}\) niemal o stałą
+różnicę rzędu \(\approx 1.0\text{-}1.2\,\mathrm{mT}\)
+(\(B(0)\): \(6.59\,\mathrm{mT}\) vs \(7.76\,\mathrm{mT}\)).
+Dla większych odległości (\(x \gtrsim 8.5\,\mathrm{cm}\)) wyniki
+zbliżają się do krzywej teoretycznej. Można to wygłumaczyć wpływem
+stanowiska pomiarowego sąsiada (w punkcie \(x=8.5\,\mathrm{cm}\)),
+zasilacz sąsiadującego stanowiska został wyłączony.
+
+\pagebreak
+
+\section{Magnes ferrytowy}
+
+Warunki: prąd halotronu \(I_h = 14\,\mathrm{mA}\).
+Do przeliczeń użyto parametrów z cechowania:
+\(c = 95.28\,\mathrm{V/(A\cdot T)}\) oraz
+\(R_{\mathrm{off}} = -0.387\,\Omega\).
+Indukcję wyznaczano ze wzoru
+\[
+  B = \frac{U - R_{\mathrm{off}} I_h}{c\, I_h}.
+\]
+Przykład (dla \(x=0\)):
+\(\,U=-370\,\mathrm{mV}\Rightarrow
+  B=\frac{-0.370 - (-0.387\cdot 0.014)}{95.28\cdot 0.014}
+\approx -0.273\,\mathrm{T}\).
+
+\begin{table}[h]
+  \centering
+  \caption{Indukcja pola magnesu ferrytowego w funkcji odległości wraz z niepewnością pomiaru.}
+  \label{tab:magnes}
+  \begin{tabular}{cccc}
+    \hline
+    \(x\) [cm] & \(U\) [mV] & \(B\) [mT] & \(u(B)\) [mT] \\
+    \hline
+    0   &  -370.0   & -273.37 &  $\pm$3.02 \\
+    1   &   -67.2   &  -46.19 &  $\pm$0.53 \\
+    5   &    -8.1   &   -1.85 &  $\pm$0.05 \\
+    10  &    -6.37  &   -0.55 &  $\pm$0.05 \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\noindent
+\subsection*{Niepewność pomiaru indukcji magnetycznej}
+Niepewność złożoną obliczono zgodnie ze wzorem:
+Niepewność złożoną indukcji magnetycznej \(u(B)\) obliczono metodą propagacji niepewności:
+
+\[
+u(B) = \sqrt{
+\left(
+\frac{\partial B}{\partial U}\,u(U)
+\right)^2 +
+\left(
+\frac{\partial B}{\partial c}\,u(c)
+\right)^2 +
+\left(
+\frac{\partial B}{\partial I}\,u(I)
+\right)^2 +
+\left(
+\frac{\partial B}{\partial R}\,u(R)
+\right)^2
+}.
+\]
+
+Po podstawieniu pochodnych z równania
+\(
+B = \frac{U - R I}{c\,I}
+\)
+otrzymujemy:
+
+\[
+u(B) =
+\sqrt{
+\left(
+\frac{u(U)}{cI}
+\right)^2 +
+\left[
+\left(
+\frac{R}{c^2} - \frac{U}{c^2 I}
+\right)u(c)
+\right]^2 +
+\left(
+\frac{U}{c I^2}u(I)
+\right)^2 +
+\left(
+\frac{u(R)}{c}
+\right)^2
+}.
+\]
+
+Po wyłączeniu \(1/c\) przed nawias:
+
+\[
+u(B) = \frac{1}{c}\,
+\sqrt{
+\left(
+\frac{u(U)}{I}
+\right)^2 +
+\left[
+\left(
+\frac{R}{c} - \frac{U}{c I}
+\right)u(c)
+\right]^2 +
+\left(
+\frac{U}{I^2}u(I)
+\right)^2 +
+\big(u(R)\big)^2
+}.
+\]
+\pagebreak
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{indukcja-magnes.png}
+  \caption{Rozkład indukcji magnetycznej \(B(x)\) magnesu ferrytowego.}
+  \label{fig:indukcja-magnes}
+\end{figure}
+
+Znak ujemny oznacza zwrot wektora \(\mathbf{B}\) przeciwny do konwencji
+przyjętej w cechowaniu; wartości bezwzględne odpowiadają modułowi indukcji.
+Wynik przy powierzchni (\(|B|\approx 0.27\,\mathrm{T}\)) jest typowy dla
+magnesów ferrytowych i silnie maleje z odległością (\(\sim 1/r^3\) dla
+odległości większych od rozmiarów magnesu). Dla porównania, w środku cewki
+z części B otrzymano \(B_0 \approx 7.76\,\mathrm{mT}\), zatem przy \(x=0\)
+magnes daje około 35-krotnie większą indukcję niż cewka dla \(I_s=9.7\,\mathrm{A}\).
+\bigbreak
 \section{Wnioski}
+\begin{enumerate}
+\item Napięcie Halla zmienia się liniowo wraz z indukcją pola magnetycznego, co potwierdza zależność \(U_H = cIB\). Wyznaczono stałą halotronu \(c = (95.28 \pm 1.60)\,\mathrm{V/(A\cdot T)}\) oraz opór \(R = (-0.387 \pm 0.051)\,\Omega\).
+
+\item Rozkład pola magnetycznego cewki jest zgodny z teorią, choć wartości doświadczalne są nieco niższe od obliczonych. Różnice mogą wynikać z niedokładnego ustawienia halotronu lub wpływu pól zewnętrznych, w szczególności stanowisk sąsiadujących i ich zasilaczy.
+
+\item Indukcja pola magnesu ferrytowego maleje wraz z odległością, zgodnie z przewidywaniami. Przy powierzchni magnesu \(|B| \approx 0.27\,\mathrm{T}\), a dla większych odległości wartości są znikome w granicach błędu pomiaru.
+\end{enumerate}
 
 \end{document}
